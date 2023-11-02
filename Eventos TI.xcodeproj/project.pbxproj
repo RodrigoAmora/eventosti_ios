@@ -101,14 +101,12 @@
 		D2A7DEC82AF343930083E7F8 /* Eventos TI */ = {
 			isa = PBXGroup;
 			children = (
-				D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */,
-				D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */,
-				D2A7DECD2AF343930083E7F8 /* ViewController.swift */,
-				D2A7DECF2AF343930083E7F8 /* Main.storyboard */,
+				D2B152662AF4372E00D62F59 /* AppDelegate */,
 				D2A7DED52AF343930083E7F8 /* Assets.xcassets */,
-				D2A7DED72AF343930083E7F8 /* LaunchScreen.storyboard */,
-				D2A7DEDA2AF343930083E7F8 /* Info.plist */,
+				D2B152672AF4374000D62F59 /* Controller */,
 				D2A7DED22AF343930083E7F8 /* Eventos_TI.xcdatamodeld */,
+				D2A7DEDA2AF343930083E7F8 /* Info.plist */,
+				D2B152682AF4374A00D62F59 /* View */,
 			);
 			path = "Eventos TI";
 			sourceTree = "<group>";
@@ -128,6 +126,32 @@
 				D2A7DEEF2AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift */,
 			);
 			path = "Eventos TIUITests";
+			sourceTree = "<group>";
+		};
+		D2B152662AF4372E00D62F59 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */,
+				D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D2B152672AF4374000D62F59 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7DECD2AF343930083E7F8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D2B152682AF4374A00D62F59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7DED72AF343930083E7F8 /* LaunchScreen.storyboard */,
+				D2A7DECF2AF343930083E7F8 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
