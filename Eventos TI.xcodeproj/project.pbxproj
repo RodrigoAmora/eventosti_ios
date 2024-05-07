@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		388E6795B6E012C38286C5A0 /* Pods_Eventos_TI_Eventos_TIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D32052FCBDC57E79B7901D6 /* Pods_Eventos_TI_Eventos_TIUITests.framework */; };
+		466C336DF16DE9953A025BFF /* Pods_Eventos_TI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FE87CB70E09DD211F1E060 /* Pods_Eventos_TI.framework */; };
+		5EDA0C7B33779181AAEE5165 /* Pods_Eventos_TITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E467EFDF7815D3D09CF396C /* Pods_Eventos_TITests.framework */; };
+		D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FFAE82BE9EBB300C68661 /* Evento.swift */; };
 		D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */; };
 		D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */; };
 		D2A7DECE2AF343930083E7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DECD2AF343930083E7F8 /* ViewController.swift */; };
@@ -37,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CF93956339809DABD6E3B09 /* Pods-Eventos TI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TI.debug.xcconfig"; path = "Target Support Files/Pods-Eventos TI/Pods-Eventos TI.debug.xcconfig"; sourceTree = "<group>"; };
+		2E467EFDF7815D3D09CF396C /* Pods_Eventos_TITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventos_TITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C468EEC53AAA63D04635C7 /* Pods-Eventos TI-Eventos TIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TI-Eventos TIUITests.release.xcconfig"; path = "Target Support Files/Pods-Eventos TI-Eventos TIUITests/Pods-Eventos TI-Eventos TIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		68FE87CB70E09DD211F1E060 /* Pods_Eventos_TI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventos_TI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		997D56A0FD618EE6FB5FFB10 /* Pods-Eventos TITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TITests.debug.xcconfig"; path = "Target Support Files/Pods-Eventos TITests/Pods-Eventos TITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D32052FCBDC57E79B7901D6 /* Pods_Eventos_TI_Eventos_TIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventos_TI_Eventos_TIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50443E5FDF20AF25334F328 /* Pods-Eventos TI-Eventos TIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TI-Eventos TIUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eventos TI-Eventos TIUITests/Pods-Eventos TI-Eventos TIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C75AF84B67E1481B8CF9A3C3 /* Pods-Eventos TITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TITests.release.xcconfig"; path = "Target Support Files/Pods-Eventos TITests/Pods-Eventos TITests.release.xcconfig"; sourceTree = "<group>"; };
+		D26FFAE82BE9EBB300C68661 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		D2A7DEC62AF343930083E7F8 /* Eventos TI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventos TI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +64,7 @@
 		D2A7DEE92AF343940083E7F8 /* Eventos TIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eventos TIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A7DEED2AF343940083E7F8 /* Eventos_TIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos_TIUITests.swift; sourceTree = "<group>"; };
 		D2A7DEEF2AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos_TIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F60C7B8B1479318CA46DB47C /* Pods-Eventos TI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TI.release.xcconfig"; path = "Target Support Files/Pods-Eventos TI/Pods-Eventos TI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466C336DF16DE9953A025BFF /* Pods_Eventos_TI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDA0C7B33779181AAEE5165 /* Pods_Eventos_TITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388E6795B6E012C38286C5A0 /* Pods_Eventos_TI_Eventos_TIUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37FB46EAE7D6779B4E036C7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68FE87CB70E09DD211F1E060 /* Pods_Eventos_TI.framework */,
+				9D32052FCBDC57E79B7901D6 /* Pods_Eventos_TI_Eventos_TIUITests.framework */,
+				2E467EFDF7815D3D09CF396C /* Pods_Eventos_TITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5B433E2F10D94706EE77E17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CF93956339809DABD6E3B09 /* Pods-Eventos TI.debug.xcconfig */,
+				F60C7B8B1479318CA46DB47C /* Pods-Eventos TI.release.xcconfig */,
+				A50443E5FDF20AF25334F328 /* Pods-Eventos TI-Eventos TIUITests.debug.xcconfig */,
+				46C468EEC53AAA63D04635C7 /* Pods-Eventos TI-Eventos TIUITests.release.xcconfig */,
+				997D56A0FD618EE6FB5FFB10 /* Pods-Eventos TITests.debug.xcconfig */,
+				C75AF84B67E1481B8CF9A3C3 /* Pods-Eventos TITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D26FFAE72BE9EBA100C68661 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D26FFAE82BE9EBB300C68661 /* Evento.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D2A7DEBD2AF343920083E7F8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +133,8 @@
 				D2A7DEE22AF343940083E7F8 /* Eventos TITests */,
 				D2A7DEEC2AF343940083E7F8 /* Eventos TIUITests */,
 				D2A7DEC72AF343930083E7F8 /* Products */,
+				A5B433E2F10D94706EE77E17 /* Pods */,
+				37FB46EAE7D6779B4E036C7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +151,7 @@
 		D2A7DEC82AF343930083E7F8 /* Eventos TI */ = {
 			isa = PBXGroup;
 			children = (
+				D26FFAE72BE9EBA100C68661 /* Model */,
 				D2B152662AF4372E00D62F59 /* AppDelegate */,
 				D2A7DED52AF343930083E7F8 /* Assets.xcassets */,
 				D2B152672AF4374000D62F59 /* Controller */,
@@ -161,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A7DEF32AF343940083E7F8 /* Build configuration list for PBXNativeTarget "Eventos TI" */;
 			buildPhases = (
+				012ED007AF87443C3128013F /* [CP] Check Pods Manifest.lock */,
 				D2A7DEC22AF343930083E7F8 /* Sources */,
 				D2A7DEC32AF343930083E7F8 /* Frameworks */,
 				D2A7DEC42AF343930083E7F8 /* Resources */,
@@ -178,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A7DEF62AF343940083E7F8 /* Build configuration list for PBXNativeTarget "Eventos TITests" */;
 			buildPhases = (
+				1968B14C38CF9A4DFFCBBD15 /* [CP] Check Pods Manifest.lock */,
 				D2A7DEDB2AF343940083E7F8 /* Sources */,
 				D2A7DEDC2AF343940083E7F8 /* Frameworks */,
 				D2A7DEDD2AF343940083E7F8 /* Resources */,
@@ -196,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A7DEF92AF343940083E7F8 /* Build configuration list for PBXNativeTarget "Eventos TIUITests" */;
 			buildPhases = (
+				5C527FD6D20B56FD22B79F36 /* [CP] Check Pods Manifest.lock */,
 				D2A7DEE52AF343940083E7F8 /* Sources */,
 				D2A7DEE62AF343940083E7F8 /* Frameworks */,
 				D2A7DEE72AF343940083E7F8 /* Resources */,
@@ -280,6 +334,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		012ED007AF87443C3128013F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eventos TI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1968B14C38CF9A4DFFCBBD15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eventos TITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C527FD6D20B56FD22B79F36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eventos TI-Eventos TIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D2A7DEC22AF343930083E7F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -289,6 +412,7 @@
 				D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */,
 				D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */,
 				D2A7DED42AF343930083E7F8 /* Eventos_TI.xcdatamodeld in Sources */,
+				D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +589,7 @@
 		};
 		D2A7DEF42AF343940083E7F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF93956339809DABD6E3B09 /* Pods-Eventos TI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -493,6 +618,7 @@
 		};
 		D2A7DEF52AF343940083E7F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60C7B8B1479318CA46DB47C /* Pods-Eventos TI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -521,6 +647,7 @@
 		};
 		D2A7DEF72AF343940083E7F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 997D56A0FD618EE6FB5FFB10 /* Pods-Eventos TITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +668,7 @@
 		};
 		D2A7DEF82AF343940083E7F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C75AF84B67E1481B8CF9A3C3 /* Pods-Eventos TITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -561,6 +689,7 @@
 		};
 		D2A7DEFA2AF343940083E7F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50443E5FDF20AF25334F328 /* Pods-Eventos TI-Eventos TIUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,6 +708,7 @@
 		};
 		D2A7DEFB2AF343940083E7F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46C468EEC53AAA63D04635C7 /* Pods-Eventos TI-Eventos TIUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
