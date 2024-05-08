@@ -12,6 +12,7 @@
 		5EDA0C7B33779181AAEE5165 /* Pods_Eventos_TITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E467EFDF7815D3D09CF396C /* Pods_Eventos_TITests.framework */; };
 		D26D6DA92BEB408A007448A4 /* ListaEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */; };
 		D26D6DAA2BEB408A007448A4 /* ListaEventosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */; };
+		D26D6DAD2BEB414A007448A4 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D6DAC2BEB414A007448A4 /* UIExtension.swift */; };
 		D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FFAE82BE9EBB300C68661 /* Evento.swift */; };
 		D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */; };
 		D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 		C75AF84B67E1481B8CF9A3C3 /* Pods-Eventos TITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TITests.release.xcconfig"; path = "Target Support Files/Pods-Eventos TITests/Pods-Eventos TITests.release.xcconfig"; sourceTree = "<group>"; };
 		D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEventosViewController.swift; sourceTree = "<group>"; };
 		D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaEventosViewController.xib; sourceTree = "<group>"; };
+		D26D6DAC2BEB414A007448A4 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		D26FFAE82BE9EBB300C68661 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		D2A7DEC62AF343930083E7F8 /* Eventos TI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventos TI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D26D6DAB2BEB4138007448A4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D26D6DAC2BEB414A007448A4 /* UIExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D26FFAE72BE9EBA100C68661 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 		D2A7DEC82AF343930083E7F8 /* Eventos TI */ = {
 			isa = PBXGroup;
 			children = (
+				D26D6DAB2BEB4138007448A4 /* Extension */,
 				D2B152662AF4372E00D62F59 /* AppDelegate */,
 				D2A7DED52AF343930083E7F8 /* Assets.xcassets */,
 				D2B152672AF4374000D62F59 /* Controller */,
@@ -418,6 +429,7 @@
 				D26D6DA92BEB408A007448A4 /* ListaEventosViewController.swift in Sources */,
 				D2A7DECE2AF343930083E7F8 /* ViewController.swift in Sources */,
 				D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */,
+				D26D6DAD2BEB414A007448A4 /* UIExtension.swift in Sources */,
 				D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */,
 				D2A7DED42AF343930083E7F8 /* Eventos_TI.xcdatamodeld in Sources */,
 				D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */,
