@@ -11,7 +11,7 @@ import CoreData
 
 class EventoDao {
     
-    class func fetchRequest() -> NSFetchRequest<Evento> {
+    private class func fetchRequest() -> NSFetchRequest<Evento> {
         return NSFetchRequest(entityName: "Evento")
     }
     
@@ -37,10 +37,10 @@ class EventoDao {
         
         let managedObj = NSManagedObject(entity: entity!, insertInto: context)
         managedObj.setValue(evento.id, forKey: "id")
-        managedObj.setValue(evento.nome, forKey: "nome")
         managedObj.setValue(evento.dataFim, forKey: "dataFim")
         managedObj.setValue(evento.dataInicio, forKey: "dataInicio")
         managedObj.setValue(evento.descricao, forKey: "descricao")
+        managedObj.setValue(evento.nome, forKey: "nome")
         managedObj.setValue(evento.site, forKey: "site")
         managedObj.setValue(evento.site, forKey: "tipoEvento")
         
@@ -53,7 +53,7 @@ class EventoDao {
     
     class func buscarEventos() -> NSFetchedResultsController<Evento> {
         let searcher: NSFetchedResultsController<Evento> = {
-            var fetchRequest: NSFetchRequest<Evento> = Evento.fetchRequest()
+            var fetchRequest: NSFetchRequest<Evento> = self.fetchRequest()
             let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
             fetchRequest.sortDescriptors = [sortDescriptor]
             
@@ -87,7 +87,7 @@ class EventoDao {
     }
     
     class func cleanCoreData() {
-        let fetchRequest:NSFetchRequest<Evento> = Evento.fetchRequest()
+        let fetchRequest:NSFetchRequest<Evento> = self.fetchRequest()
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
         do {
             try CoreDataManager.getContext().execute(deleteRequest)
