@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-
+@objc(Evento)
 class Evento: NSManagedObject, Decodable {
     
     // MARK: - Atributes
@@ -19,9 +19,10 @@ class Evento: NSManagedObject, Decodable {
     @NSManaged var site: String
     @NSManaged var dataInicio: Date
     @NSManaged var dataFim: Date
+    @NSManaged var tipoEvento: String
     
     // MARK: - Inits
-    convenience init(id: Int64, nome: String, descricao: String, site: String, dataInicio: Date, dataFim: Date) {
+    convenience init(id: Int64, nome: String, descricao: String, site: String, dataInicio: Date, dataFim: Date, tipoEvento: String) {
         let managedContext = UIApplication.shared.delegate as! AppDelegate
         self.init(context: managedContext.persistentContainer.viewContext)
         self.id = id
@@ -30,6 +31,7 @@ class Evento: NSManagedObject, Decodable {
         self.site = site
         self.dataInicio = dataInicio
         self.dataFim = dataFim
+        self.tipoEvento = tipoEvento
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -43,6 +45,7 @@ class Evento: NSManagedObject, Decodable {
             self.site = try container.decode(String.self, forKey: .site)
             self.dataInicio = try container.decode(Date.self, forKey: .dataInicio)
             self.dataFim = try container.decode(Date.self, forKey: .dataFim)
+            self.tipoEvento = try container.decode(String.self, forKey: .tipoEvento)
         } catch {
             print("Error retriving questions \(error)")
         }
@@ -56,43 +59,7 @@ class Evento: NSManagedObject, Decodable {
         case site = "site"
         case dataInicio = "dataInicio"
         case dataFim = "dataFim"
-    }
-    
-    // MARK: - Core Data - DAO
-    class func fetchRequest() -> NSFetchRequest<Evento> {
-        return NSFetchRequest(entityName: "Evento")
-    }
-    
-    func save(_ context: NSManagedObjectContext) {
-        do {
-            try context.save()
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    class func load(_ fetchedResultController: NSFetchedResultsController<Evento>) {
-        do {
-            try fetchedResultController.performFetch()
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    class func buscarEventos() -> NSFetchedResultsController<Evento> {
-        let searcher: NSFetchedResultsController<Evento> = {
-            var fetchRequest: NSFetchRequest<Evento> = Evento.fetchRequest()
-            let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
-            fetchRequest.sortDescriptors = [sortDescriptor]
-            
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            return NSFetchedResultsController(fetchRequest: fetchRequest,
-                                              managedObjectContext: appDelegate.persistentContainer.viewContext,
-                                              sectionNameKeyPath: nil,
-                                              cacheName: nil)
-        }()
-        
-        return searcher
+        case tipoEvento = "tipoEvento"
     }
     
 }
