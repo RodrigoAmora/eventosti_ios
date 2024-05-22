@@ -180,9 +180,9 @@
 		D2167D692BFD8D620048CE43 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D2167D6D2BFD8E1A0048CE43 /* Service */,
-				D2167D6A2BFD8D6F0048CE43 /* Response */,
 				D2167D702BFD90E10048CE43 /* Resource.swift */,
+				D2167D6A2BFD8D6F0048CE43 /* Response */,
+				D2167D6D2BFD8E1A0048CE43 /* Service */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -270,8 +270,6 @@
 		D2A7DEC82AF343930083E7F8 /* Eventos TI */ = {
 			isa = PBXGroup;
 			children = (
-				D2167D692BFD8D620048CE43 /* Network */,
-				D2167D662BFD8BF20048CE43 /* Repository */,
 				D2B152662AF4372E00D62F59 /* AppDelegate */,
 				D2A7DED52AF343930083E7F8 /* Assets.xcassets */,
 				D2B152672AF4374000D62F59 /* Controller */,
@@ -280,6 +278,8 @@
 				D26D6DAB2BEB4138007448A4 /* Extension */,
 				D2A7DEDA2AF343930083E7F8 /* Info.plist */,
 				D26FFAE72BE9EBA100C68661 /* Model */,
+				D2167D692BFD8D620048CE43 /* Network */,
+				D2167D662BFD8BF20048CE43 /* Repository */,
 				D2B152682AF4374A00D62F59 /* View */,
 				D2167D602BFD8A400048CE43 /* ViewModel */,
 			);
