@@ -24,10 +24,11 @@ class ListaEventosViewController: UIViewController {
         super.viewDidLoad()
         self.configureTableView()
         self.configureDelegate()
+        self.buscarEventos()
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        self.buscarEventos()
+        
     }
     
     // MARK: - Métodos
@@ -74,11 +75,11 @@ extension ListaEventosViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
-            fatalError("error creating CharacterTableViewCell")
+            fatalError("error creating TableViewCell")
         }
 
-        let character = self.eventos[indexPath.row]
-        cell.configureCell(character)
+        let evento = self.eventos[indexPath.row]
+        cell.configureCell(evento)
         cell.layoutMargins = UIEdgeInsets.zero
         
         return cell
