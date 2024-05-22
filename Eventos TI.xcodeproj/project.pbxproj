@@ -10,6 +10,8 @@
 		388E6795B6E012C38286C5A0 /* Pods_Eventos_TI_Eventos_TIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D32052FCBDC57E79B7901D6 /* Pods_Eventos_TI_Eventos_TIUITests.framework */; };
 		466C336DF16DE9953A025BFF /* Pods_Eventos_TI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FE87CB70E09DD211F1E060 /* Pods_Eventos_TI.framework */; };
 		5EDA0C7B33779181AAEE5165 /* Pods_Eventos_TITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E467EFDF7815D3D09CF396C /* Pods_Eventos_TITests.framework */; };
+		D2167D5E2BFD842A0048CE43 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D5C2BFD842A0048CE43 /* TableViewCell.swift */; };
+		D2167D5F2BFD842A0048CE43 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2167D5D2BFD842A0048CE43 /* TableViewCell.xib */; };
 		D229704F2BEC7AB60066A7DB /* EventoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229704E2BEC7AB60066A7DB /* EventoDao.swift */; };
 		D26D6DA92BEB408A007448A4 /* ListaEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */; };
 		D26D6DAA2BEB408A007448A4 /* ListaEventosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */; };
@@ -54,6 +56,8 @@
 		9D32052FCBDC57E79B7901D6 /* Pods_Eventos_TI_Eventos_TIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventos_TI_Eventos_TIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50443E5FDF20AF25334F328 /* Pods-Eventos TI-Eventos TIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TI-Eventos TIUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eventos TI-Eventos TIUITests/Pods-Eventos TI-Eventos TIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C75AF84B67E1481B8CF9A3C3 /* Pods-Eventos TITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TITests.release.xcconfig"; path = "Target Support Files/Pods-Eventos TITests/Pods-Eventos TITests.release.xcconfig"; sourceTree = "<group>"; };
+		D2167D5C2BFD842A0048CE43 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D2167D5D2BFD842A0048CE43 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		D229704E2BEC7AB60066A7DB /* EventoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDao.swift; sourceTree = "<group>"; };
 		D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEventosViewController.swift; sourceTree = "<group>"; };
 		D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaEventosViewController.xib; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 				C75AF84B67E1481B8CF9A3C3 /* Pods-Eventos TITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D2167D5B2BFD84090048CE43 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2167D5C2BFD842A0048CE43 /* TableViewCell.swift */,
+				D2167D5D2BFD842A0048CE43 /* TableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D229704C2BEC7A930066A7DB /* Database */ = {
@@ -245,6 +258,7 @@
 		D2B152682AF4374A00D62F59 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D2167D5B2BFD84090048CE43 /* Cell */,
 				D2A7DED72AF343930083E7F8 /* LaunchScreen.storyboard */,
 				D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */,
 				D2A7DECF2AF343930083E7F8 /* Main.storyboard */,
@@ -360,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A7DED92AF343930083E7F8 /* LaunchScreen.storyboard in Resources */,
+				D2167D5F2BFD842A0048CE43 /* TableViewCell.xib in Resources */,
 				D2A7DED62AF343930083E7F8 /* Assets.xcassets in Resources */,
 				D2A7DED12AF343930083E7F8 /* Main.storyboard in Resources */,
 				D26D6DAA2BEB408A007448A4 /* ListaEventosViewController.xib in Resources */,
@@ -461,6 +476,7 @@
 				D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */,
 				D26D6DAD2BEB414A007448A4 /* UIExtension.swift in Sources */,
 				D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */,
+				D2167D5E2BFD842A0048CE43 /* TableViewCell.swift in Sources */,
 				D2A7DED42AF343930083E7F8 /* Eventos_TI.xcdatamodeld in Sources */,
 				D2BB09202BECA70B009E1395 /* CoreDataManager.swift in Sources */,
 				D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */,
