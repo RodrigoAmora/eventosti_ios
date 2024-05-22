@@ -17,12 +17,12 @@ class Evento: NSManagedObject, Decodable {
     @NSManaged var nome: String
     @NSManaged var descricao: String
     @NSManaged var site: String
-    @NSManaged var dataInicio: Date
-    @NSManaged var dataFim: Date
+    @NSManaged var dataInicio: String
+    @NSManaged var dataFim: String
     @NSManaged var tipoEvento: String
     
     // MARK: - Inits
-    convenience init(id: Int64, nome: String, descricao: String, site: String, dataInicio: Date, dataFim: Date, tipoEvento: String) {
+    convenience init(id: Int64, nome: String, descricao: String, site: String, dataInicio: String, dataFim: String, tipoEvento: String) {
         let managedContext = UIApplication.shared.delegate as! AppDelegate
         self.init(context: managedContext.persistentContainer.viewContext)
         self.id = id
@@ -43,8 +43,8 @@ class Evento: NSManagedObject, Decodable {
             self.nome = try container.decode(String.self, forKey: .nome)
             self.descricao = try container.decode(String.self, forKey: .descricao)
             self.site = try container.decode(String.self, forKey: .site)
-            self.dataInicio = try container.decode(Date.self, forKey: .dataInicio)
-            self.dataFim = try container.decode(Date.self, forKey: .dataFim)
+            self.dataInicio = try container.decode(String.self, forKey: .dataInicio)
+            self.dataFim = try container.decode(String.self, forKey: .dataFim)
             self.tipoEvento = try container.decode(String.self, forKey: .tipoEvento)
         } catch {
             print("Error retriving questions \(error)")

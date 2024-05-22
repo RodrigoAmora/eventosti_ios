@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="Evento" representedClassName=".Evento" syncable="YES">
-        <attribute name="dataFim" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="dataIncio" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dataFim" optional="YES" attributeType="String"/>
+        <attribute name="dataIncio" optional="YES" attributeType="String"/>
         <attribute name="descricao" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="nome" optional="YES" attributeType="String"/>
