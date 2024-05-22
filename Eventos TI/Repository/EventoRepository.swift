@@ -15,10 +15,10 @@ class EventoRepository {
     private var resource: Resource<[Evento]?>?
     
     // MARK: - Methods
-    func buscarEventos(page: Int, completion: @escaping(_ resource: Resource<[Evento]?>) -> Void) -> Resource<[Evento]?>? {
+    func buscarEventos(page: Int, completion: @escaping(_ resource: Resource<[Evento]?>) -> Void) {
         self.resource = Resource(result: [Evento]())
         
-        self.eventoService.buscarEventos(page: page, completion: { [weak self] eventos, error in
+        self.eventoService.buscarEventos(page: page, completion: { eventos, error in
             if eventos.count == 0 {
                 completion(Resource(result: nil, errorCode: error))
             } else {
@@ -29,8 +29,6 @@ class EventoRepository {
                 completion(Resource(result: eventos))
             }
         })
-        
-        return self.resource
     }
     
 }
