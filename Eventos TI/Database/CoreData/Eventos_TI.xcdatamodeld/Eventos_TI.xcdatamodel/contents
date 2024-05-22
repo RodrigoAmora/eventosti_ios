@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="Evento" representedClassName=".Evento" syncable="YES">
         <attribute name="dataFim" optional="YES" attributeType="String"/>
-        <attribute name="dataIncio" optional="YES" attributeType="String"/>
+        <attribute name="dataInicio" optional="YES" attributeType="String"/>
         <attribute name="descricao" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="nome" optional="YES" attributeType="String"/>
