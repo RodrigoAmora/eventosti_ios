@@ -6,7 +6,8 @@ target 'Eventos TI' do
   use_frameworks!
 
   # Pods for Eventos TI
-
+  pod 'Alamofire', '~> 5.7.1'
+  
   target 'Eventos TITests' do
     inherit! :search_paths
     # Pods for testing
