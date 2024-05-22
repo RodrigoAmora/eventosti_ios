@@ -19,14 +19,13 @@ class EventoViewModel {
     
     // MARK: - Methods
     func buscarEventos(page: Int) {
-        self.repository.buscarEventos(page: page, completion: { [weak self] resource in
+        self.repository.buscarEventos(page: page, completion: { resource in
             guard let eventos: [Evento] = resource.result ?? [] else { return }
 
             if eventos.count == 0 {
-                self?.eventoDelegate.showError(resource.errorCode ?? 0)
+                self.eventoDelegate.showError(resource.errorCode ?? 0)
             } else {
-                
-                self?.eventoDelegate.populateTableView(eventos: eventos)
+                self.eventoDelegate.populateTableView(eventos: eventos)
             }
         })
     }
