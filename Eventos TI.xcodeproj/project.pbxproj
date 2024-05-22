@@ -12,6 +12,12 @@
 		5EDA0C7B33779181AAEE5165 /* Pods_Eventos_TITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E467EFDF7815D3D09CF396C /* Pods_Eventos_TITests.framework */; };
 		D2167D5E2BFD842A0048CE43 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D5C2BFD842A0048CE43 /* TableViewCell.swift */; };
 		D2167D5F2BFD842A0048CE43 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2167D5D2BFD842A0048CE43 /* TableViewCell.xib */; };
+		D2167D622BFD8A5C0048CE43 /* EventoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D612BFD8A5C0048CE43 /* EventoViewModel.swift */; };
+		D2167D652BFD8AC90048CE43 /* EventoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D642BFD8AC90048CE43 /* EventoDelegate.swift */; };
+		D2167D682BFD8C080048CE43 /* EventoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D672BFD8C080048CE43 /* EventoRepository.swift */; };
+		D2167D6C2BFD8D970048CE43 /* EventoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D6B2BFD8D970048CE43 /* EventoResponse.swift */; };
+		D2167D6F2BFD8E330048CE43 /* EventoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D6E2BFD8E330048CE43 /* EventoService.swift */; };
+		D2167D712BFD90E10048CE43 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D702BFD90E10048CE43 /* Resource.swift */; };
 		D229704F2BEC7AB60066A7DB /* EventoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229704E2BEC7AB60066A7DB /* EventoDao.swift */; };
 		D26D6DA92BEB408A007448A4 /* ListaEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */; };
 		D26D6DAA2BEB408A007448A4 /* ListaEventosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */; };
@@ -58,6 +64,12 @@
 		C75AF84B67E1481B8CF9A3C3 /* Pods-Eventos TITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TITests.release.xcconfig"; path = "Target Support Files/Pods-Eventos TITests/Pods-Eventos TITests.release.xcconfig"; sourceTree = "<group>"; };
 		D2167D5C2BFD842A0048CE43 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D2167D5D2BFD842A0048CE43 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		D2167D612BFD8A5C0048CE43 /* EventoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoViewModel.swift; sourceTree = "<group>"; };
+		D2167D642BFD8AC90048CE43 /* EventoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDelegate.swift; sourceTree = "<group>"; };
+		D2167D672BFD8C080048CE43 /* EventoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoRepository.swift; sourceTree = "<group>"; };
+		D2167D6B2BFD8D970048CE43 /* EventoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoResponse.swift; sourceTree = "<group>"; };
+		D2167D6E2BFD8E330048CE43 /* EventoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoService.swift; sourceTree = "<group>"; };
+		D2167D702BFD90E10048CE43 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		D229704E2BEC7AB60066A7DB /* EventoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDao.swift; sourceTree = "<group>"; };
 		D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEventosViewController.swift; sourceTree = "<group>"; };
 		D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaEventosViewController.xib; sourceTree = "<group>"; };
@@ -141,6 +153,56 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D2167D602BFD8A400048CE43 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2167D612BFD8A5C0048CE43 /* EventoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D2167D632BFD8AB50048CE43 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D2167D642BFD8AC90048CE43 /* EventoDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		D2167D662BFD8BF20048CE43 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D2167D672BFD8C080048CE43 /* EventoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D2167D692BFD8D620048CE43 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2167D6D2BFD8E1A0048CE43 /* Service */,
+				D2167D6A2BFD8D6F0048CE43 /* Response */,
+				D2167D702BFD90E10048CE43 /* Resource.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D2167D6A2BFD8D6F0048CE43 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				D2167D6B2BFD8D970048CE43 /* EventoResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		D2167D6D2BFD8E1A0048CE43 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D2167D6E2BFD8E330048CE43 /* EventoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		D229704C2BEC7A930066A7DB /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,14 +270,18 @@
 		D2A7DEC82AF343930083E7F8 /* Eventos TI */ = {
 			isa = PBXGroup;
 			children = (
+				D2167D692BFD8D620048CE43 /* Network */,
+				D2167D662BFD8BF20048CE43 /* Repository */,
 				D2B152662AF4372E00D62F59 /* AppDelegate */,
 				D2A7DED52AF343930083E7F8 /* Assets.xcassets */,
 				D2B152672AF4374000D62F59 /* Controller */,
 				D229704C2BEC7A930066A7DB /* Database */,
+				D2167D632BFD8AB50048CE43 /* Delegate */,
 				D26D6DAB2BEB4138007448A4 /* Extension */,
 				D2A7DEDA2AF343930083E7F8 /* Info.plist */,
 				D26FFAE72BE9EBA100C68661 /* Model */,
 				D2B152682AF4374A00D62F59 /* View */,
+				D2167D602BFD8A400048CE43 /* ViewModel */,
 			);
 			path = "Eventos TI";
 			sourceTree = "<group>";
@@ -277,6 +343,7 @@
 				D2A7DEC22AF343930083E7F8 /* Sources */,
 				D2A7DEC32AF343930083E7F8 /* Frameworks */,
 				D2A7DEC42AF343930083E7F8 /* Resources */,
+				FDD5D9841FE2F4B765A88F57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +381,7 @@
 				D2A7DEE52AF343940083E7F8 /* Sources */,
 				D2A7DEE62AF343940083E7F8 /* Frameworks */,
 				D2A7DEE72AF343940083E7F8 /* Resources */,
+				B4EC8174D3E826E818C9C310 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -464,6 +532,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B4EC8174D3E826E818C9C310 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventos TI-Eventos TIUITests/Pods-Eventos TI-Eventos TIUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventos TI-Eventos TIUITests/Pods-Eventos TI-Eventos TIUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eventos TI-Eventos TIUITests/Pods-Eventos TI-Eventos TIUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD5D9841FE2F4B765A88F57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventos TI/Pods-Eventos TI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventos TI/Pods-Eventos TI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eventos TI/Pods-Eventos TI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -472,13 +574,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26D6DA92BEB408A007448A4 /* ListaEventosViewController.swift in Sources */,
+				D2167D712BFD90E10048CE43 /* Resource.swift in Sources */,
 				D2A7DECE2AF343930083E7F8 /* ViewController.swift in Sources */,
 				D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */,
+				D2167D652BFD8AC90048CE43 /* EventoDelegate.swift in Sources */,
+				D2167D6F2BFD8E330048CE43 /* EventoService.swift in Sources */,
 				D26D6DAD2BEB414A007448A4 /* UIExtension.swift in Sources */,
 				D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */,
 				D2167D5E2BFD842A0048CE43 /* TableViewCell.swift in Sources */,
 				D2A7DED42AF343930083E7F8 /* Eventos_TI.xcdatamodeld in Sources */,
 				D2BB09202BECA70B009E1395 /* CoreDataManager.swift in Sources */,
+				D2167D6C2BFD8D970048CE43 /* EventoResponse.swift in Sources */,
+				D2167D682BFD8C080048CE43 /* EventoRepository.swift in Sources */,
+				D2167D622BFD8A5C0048CE43 /* EventoViewModel.swift in Sources */,
 				D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */,
 				D229704F2BEC7AB60066A7DB /* EventoDao.swift in Sources */,
 			);
@@ -573,7 +681,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -636,7 +744,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
