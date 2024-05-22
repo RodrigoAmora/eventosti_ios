@@ -19,6 +19,7 @@
 		D2167D6F2BFD8E330048CE43 /* EventoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D6E2BFD8E330048CE43 /* EventoService.swift */; };
 		D2167D712BFD90E10048CE43 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D702BFD90E10048CE43 /* Resource.swift */; };
 		D2167D742BFD9E9F0048CE43 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2167D732BFD9E9F0048CE43 /* DateConverter.swift */; };
+		D2167D792BFDAB540048CE43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2167D772BFDAB540048CE43 /* Localizable.strings */; };
 		D229704F2BEC7AB60066A7DB /* EventoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229704E2BEC7AB60066A7DB /* EventoDao.swift */; };
 		D26D6DA92BEB408A007448A4 /* ListaEventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */; };
 		D26D6DAA2BEB408A007448A4 /* ListaEventosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */; };
@@ -72,6 +73,8 @@
 		D2167D6E2BFD8E330048CE43 /* EventoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoService.swift; sourceTree = "<group>"; };
 		D2167D702BFD90E10048CE43 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		D2167D732BFD9E9F0048CE43 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		D2167D782BFDAB540048CE43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D2167D7A2BFDAB6F0048CE43 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D229704E2BEC7AB60066A7DB /* EventoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDao.swift; sourceTree = "<group>"; };
 		D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEventosViewController.swift; sourceTree = "<group>"; };
 		D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaEventosViewController.xib; sourceTree = "<group>"; };
@@ -293,6 +296,7 @@
 				D2167D662BFD8BF20048CE43 /* Repository */,
 				D2B152682AF4374A00D62F59 /* View */,
 				D2167D602BFD8A400048CE43 /* ViewModel */,
+				D2167D772BFDAB540048CE43 /* Localizable.strings */,
 			);
 			path = "Eventos TI";
 			sourceTree = "<group>";
@@ -434,6 +438,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = D2A7DEBD2AF343920083E7F8;
 			productRefGroup = D2A7DEC72AF343930083E7F8 /* Products */;
@@ -453,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A7DED92AF343930083E7F8 /* LaunchScreen.storyboard in Resources */,
+				D2167D792BFDAB540048CE43 /* Localizable.strings in Resources */,
 				D2167D5F2BFD842A0048CE43 /* TableViewCell.xib in Resources */,
 				D2A7DED62AF343930083E7F8 /* Assets.xcassets in Resources */,
 				D2A7DED12AF343930083E7F8 /* Main.storyboard in Resources */,
@@ -637,6 +643,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D2167D772BFDAB540048CE43 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2167D782BFDAB540048CE43 /* en */,
+				D2167D7A2BFDAB6F0048CE43 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D2A7DECF2AF343930083E7F8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -661,6 +676,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -724,6 +740,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

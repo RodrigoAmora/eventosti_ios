@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Eventos TI
+
+  Created by Rodrigo Amora on 22/05/24.
+  
+*/
+"data_inicio" = "Data Início:";
+"data_end" = "Data Fim:";
+
+"no_internet" = "Sem Internet!";

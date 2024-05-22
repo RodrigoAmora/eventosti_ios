@@ -37,10 +37,10 @@ class TableViewCell: UITableViewCell {
     func configureCell(_ evento: Evento) {
         self.nomeLabel.text = evento.nome
         
-        self.dataFimLabel.text = String(localized: "")
-        self.dataFimValueLabel.text = evento.dataFim.formatted()
+        self.dataFimLabel.text = String(localized: "data_fim")
+        self.dataFimValueLabel.text = evento.dataFim
         
-        self.dataInicioLabel.text = String(localized: "")
-        self.dataInicioValueLabel.text = evento.dataInicio.formatted()
+        self.dataInicioLabel.text = String(localized: "data_inicio")
+        self.dataInicioValueLabel.text = evento.dataInicio
     }
 }
