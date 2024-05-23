@@ -9,4 +9,10 @@
 "data_fim" = "Data Fim:";
 "view_details" = "Ver detalhes";
 
+// ERROS
 "no_internet" = "Sem Internet!";
+
+"error_access_denied" = "Accesso negado!";
+"error_not_found" = "Evento não encontrado!";
+"error_service_unavailable" = "Serviço indisponível!";
+"error_cant_was_possible_perform_operation" = "Não foi possível realizar a operação!";

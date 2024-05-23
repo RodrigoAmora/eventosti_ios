@@ -9,4 +9,10 @@
 "data_fim" = "Date End:";
 "view_details" = "View details";
 
+// ERROS
 "no_internet" = "No Internet!";
+
+"error_access_denied" = "Access denied!";
+"error_not_found" = "Event not found!";
+"error_service_unavailable" = "Service unavailable!";
+"error_cant_was_possible_perform_operation" = "Can't was possible perform operation!";
