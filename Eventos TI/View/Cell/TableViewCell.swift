@@ -31,7 +31,14 @@ class TableViewCell: UITableViewCell {
     // MARK: - Métodos
     private func initViews() {
         self.nomeLabel.textAlignment = .center
-        self.nomeLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+        self.nomeLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
+        
+        self.dataFimValueLabel.textAlignment = .right
+        
+        self.dataFimLabel.textAlignment = .right
+        self.dataFimLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+        
+        self.dataInicioLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
     }
     
     func configureCell(_ evento: Evento) {
