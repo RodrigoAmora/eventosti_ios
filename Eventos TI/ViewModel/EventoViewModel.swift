@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Network
 
 class EventoViewModel {
     
-    private lazy var repository: EventoRepository = EventoRepository()
+    // MARK: - Atributos
+    private lazy var eventoRepository: EventoRepository = EventoRepository()
     private var eventoDelegate: EventoDelegate
     
     // MARK: - init
@@ -17,16 +19,30 @@ class EventoViewModel {
         self.eventoDelegate = eventoDelegate
     }
     
-    // MARK: - Methods
+    // MARK: - Métodos
     func buscarEventos(page: Int) {
-        self.repository.buscarEventos(page: page, completion: { resource in
-            guard let eventos: [Evento] = resource.result ?? [] else { return }
-
-            if eventos.count == 0 {
-                self.eventoDelegate.showError(resource.errorCode ?? 0)
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                self.eventoRepository.buscarEventos(page: page, completion: { resource in
+                    guard let eventos: [Evento] = resource.result ?? [] else { return }
+                    
+                    if eventos.count == 0 {
+                        self.eventoDelegate.showError(resource.errorCode ?? 0)
+                    } else {
+                        self.eventoDelegate.populateTableView(eventos: eventos)
+                    }
+                })
             } else {
+                print("Internet connection is not available.")
+                
+                let eventos = self.eventoRepository.buscarEventosDoBancoDeDados()
                 self.eventoDelegate.populateTableView(eventos: eventos)
             }
-        })
+        }
+        
+        let queue = DispatchQueue(label: "NetworkMonitor")
+        monitor.start(queue: queue)
     }
+    
 }
