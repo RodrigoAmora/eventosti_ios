@@ -4,7 +4,7 @@
 //
 //  Created by Rodrigo Amora on 08/05/24.
 //
-
+import Foundation
 import UIKit
 
 class ListaEventosViewController: UIViewController {
@@ -22,6 +22,7 @@ class ListaEventosViewController: UIViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activityIndicatorView.configureActivityIndicatorView()
         self.configureTableView()
         self.configureDelegate()
         self.buscarEventos()
@@ -50,7 +51,7 @@ class ListaEventosViewController: UIViewController {
     }
     
     private func buscarEventos() {
-//        self.activityIndicatorView.configureActivityIndicatorView()
+        self.activityIndicatorView.show()
         self.eventoViewModel.buscarEventos(page: self.page)
     }
     
@@ -61,7 +62,7 @@ class ListaEventosViewController: UIViewController {
     }
     
     @objc private func paginateTableView() {
-        self.page += 10
+        self.page += 1
         self.buscarEventos()
         self.refreshControl.endRefreshing()
     }
@@ -121,7 +122,7 @@ extension ListaEventosViewController: UITableViewDelegate {
 // MARK: - EventoDelegate
 extension ListaEventosViewController: EventoDelegate {
     func populateTableView(eventos: [Evento]) {
-//        self.activityIndicatorView.hideActivityIndicatorView()
+        self.activityIndicatorView.hide()
                 
         self.eventos = eventos
         self.evntosTableView.reloadData()
@@ -133,7 +134,7 @@ extension ListaEventosViewController: EventoDelegate {
     }
     
     func replaceAll(eventos: [Evento]) {
-//        self.activityIndicatorView.hideActivityIndicatorView()
+        self.activityIndicatorView.hide()
                 
         self.eventos.removeAll()
         self.eventos = eventos
@@ -153,5 +154,5 @@ extension ListaEventosViewController: EventoDelegate {
     func showMessage(_ message: String) {
         //
     }
-    
+
 }
