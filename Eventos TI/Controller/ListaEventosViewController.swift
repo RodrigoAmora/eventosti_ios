@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-class ListaEventosViewController: UIViewController {
+class ListaEventosViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -148,11 +148,11 @@ extension ListaEventosViewController: EventoDelegate {
     }
     
     func showError(_ errorCode: Int) {
-        //
+        self.showErrorMessage(errorCode: errorCode)
     }
     
     func showMessage(_ message: String) {
-        //
+        self.showAlert(title: "", message: message)
     }
 
 }
