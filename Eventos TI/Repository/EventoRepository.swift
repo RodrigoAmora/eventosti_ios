@@ -10,11 +10,11 @@ import UIKit
 
 class EventoRepository {
     
-    // MARK: - Atributes
+    // MARK: - Atributos
     private lazy var eventoService: EventoService = EventoService()
     private var resource: Resource<[Evento]?>?
     
-    // MARK: - Methods
+    // MARK: - Métodos
     func buscarEventos(page: Int, completion: @escaping(_ resource: Resource<[Evento]?>) -> Void) {
         self.resource = Resource(result: [Evento]())
         
@@ -22,13 +22,25 @@ class EventoRepository {
             if eventos.count == 0 {
                 completion(Resource(result: nil, errorCode: error))
             } else {
-                let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                for evento in eventos {
-                    EventoDao.saveEvento(evento)
-                }
+                self.apagarTodos()
+                //self.salvarEventos(eventos)
                 completion(Resource(result: eventos))
             }
         })
+    }
+    
+    func buscarEventosDoBancoDeDados() -> [Evento] {
+        return EventoDao.buscarEventos()
+    }
+    
+    func salvarEventos(_ eventos: [Evento]) {
+        for evento in eventos {
+            EventoDao.saveEvento(evento)
+        }
+    }
+    
+    func apagarTodos() {
+        EventoDao.cleanCoreData()
     }
     
 }
