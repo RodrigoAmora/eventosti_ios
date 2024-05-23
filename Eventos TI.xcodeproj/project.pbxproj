@@ -283,20 +283,20 @@
 		D2A7DEC82AF343930083E7F8 /* Eventos TI */ = {
 			isa = PBXGroup;
 			children = (
-				D2167D722BFD9E860048CE43 /* Converter */,
 				D2B152662AF4372E00D62F59 /* AppDelegate */,
 				D2A7DED52AF343930083E7F8 /* Assets.xcassets */,
 				D2B152672AF4374000D62F59 /* Controller */,
+				D2167D722BFD9E860048CE43 /* Converter */,
 				D229704C2BEC7A930066A7DB /* Database */,
 				D2167D632BFD8AB50048CE43 /* Delegate */,
 				D26D6DAB2BEB4138007448A4 /* Extension */,
 				D2A7DEDA2AF343930083E7F8 /* Info.plist */,
+				D2167D772BFDAB540048CE43 /* Localizable.strings */,
 				D26FFAE72BE9EBA100C68661 /* Model */,
 				D2167D692BFD8D620048CE43 /* Network */,
 				D2167D662BFD8BF20048CE43 /* Repository */,
 				D2B152682AF4374A00D62F59 /* View */,
 				D2167D602BFD8A400048CE43 /* ViewModel */,
-				D2167D772BFDAB540048CE43 /* Localizable.strings */,
 			);
 			path = "Eventos TI";
 			sourceTree = "<group>";
