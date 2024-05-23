@@ -6,6 +6,7 @@
   
 */
 "data_inicio" = "Data Início:";
-"data_end" = "Data Fim:";
+"data_fim" = "Data Fim:";
+"view_details" = "Ver detalhes";
 
 "no_internet" = "Sem Internet!";
