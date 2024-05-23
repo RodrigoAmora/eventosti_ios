@@ -38,7 +38,7 @@ class BaseViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func showError(errorCode: Int) {
+    func showErrorMessage(errorCode: Int) {
         let message = switch errorCode {
             case 403:
                 String(localized: "error_access_denied")
