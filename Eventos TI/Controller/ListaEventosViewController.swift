@@ -56,7 +56,8 @@ class ListaEventosViewController: BaseViewController {
     }
     
     private func viewDetails(_ evento: Evento) {
-        print("viewDetails")
+        let detalhesEventoViewController = DetalhesEventoViewController.intanciate(evento)
+        self.changeViewControllerWithPushViewController(detalhesEventoViewController)
     }
     
     @objc private func refreshTableView() {
