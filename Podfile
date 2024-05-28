@@ -7,6 +7,9 @@ target 'Eventos TI' do
 
   # Pods for Eventos TI
   pod 'Alamofire', '~> 5.7.1'
+  pod 'MaterialComponents/Buttons'
+  pod 'ObjectMapper', '~> 3.5'
+  pod 'Sheeeeeeeeet'
   
   target 'Eventos TITests' do
     inherit! :search_paths
