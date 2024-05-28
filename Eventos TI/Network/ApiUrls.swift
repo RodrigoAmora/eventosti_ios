@@ -8,7 +8,7 @@
 import Foundation
 
 class ApiUrls {
-    class func baseSalonAPIURL() -> String {
+    class func baseEventosTIAPIURL() -> String {
         #if DEBUG
             return "http://localhost:8080"
         #else
