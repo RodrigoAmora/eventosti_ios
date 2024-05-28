@@ -18,7 +18,7 @@ class EventoService {
         AF.request(path,
                    method: .get,
                    encoding: URLEncoding.default)
-            .responseJSON{ response in
+            .response{ response in
                 switch response.result {
                     case .success(let json):
                         switch response.response?.statusCode {
