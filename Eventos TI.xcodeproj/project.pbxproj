@@ -37,6 +37,7 @@
 		D2A7DEEE2AF343940083E7F8 /* Eventos_TIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DEED2AF343940083E7F8 /* Eventos_TIUITests.swift */; };
 		D2A7DEF02AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DEEF2AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift */; };
 		D2BB09202BECA70B009E1395 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB091F2BECA70B009E1395 /* CoreDataManager.swift */; };
+		D2E90ABC2C0581D300673F58 /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E90ABB2C0581D300673F58 /* ApiUrls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		D2A7DEED2AF343940083E7F8 /* Eventos_TIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos_TIUITests.swift; sourceTree = "<group>"; };
 		D2A7DEEF2AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos_TIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2BB091F2BECA70B009E1395 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D2E90ABB2C0581D300673F58 /* ApiUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
 		F60C7B8B1479318CA46DB47C /* Pods-Eventos TI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TI.release.xcconfig"; path = "Target Support Files/Pods-Eventos TI/Pods-Eventos TI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 		D2167D692BFD8D620048CE43 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D2E90ABB2C0581D300673F58 /* ApiUrls.swift */,
 				D2167D702BFD90E10048CE43 /* Resource.swift */,
 				D2167D6A2BFD8D6F0048CE43 /* Response */,
 				D2167D6D2BFD8E1A0048CE43 /* Service */,
@@ -598,6 +601,7 @@
 				D2167D712BFD90E10048CE43 /* Resource.swift in Sources */,
 				D2A7DECE2AF343930083E7F8 /* ViewController.swift in Sources */,
 				D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */,
+				D2E90ABC2C0581D300673F58 /* ApiUrls.swift in Sources */,
 				D26AA4822BFEED1C00C53A33 /* BaseViewController.swift in Sources */,
 				D2167D652BFD8AC90048CE43 /* EventoDelegate.swift in Sources */,
 				D2167D6F2BFD8E330048CE43 /* EventoService.swift in Sources */,
