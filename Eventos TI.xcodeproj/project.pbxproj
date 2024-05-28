@@ -332,9 +332,9 @@
 		D2B152672AF4374000D62F59 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D26AA4812BFEED1C00C53A33 /* BaseViewController.swift */,
 				D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */,
 				D2A7DECD2AF343930083E7F8 /* ViewController.swift */,
-				D26AA4812BFEED1C00C53A33 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
