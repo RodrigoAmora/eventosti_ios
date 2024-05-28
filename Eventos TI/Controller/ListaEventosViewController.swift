@@ -55,6 +55,10 @@ class ListaEventosViewController: BaseViewController {
         self.eventoViewModel.buscarEventos(page: self.page)
     }
     
+    private func viewDetails(_ evento: Evento) {
+        print("viewDetails")
+    }
+    
     @objc private func refreshTableView() {
         self.page = 0
         self.buscarEventos()
@@ -86,17 +90,17 @@ extension ListaEventosViewController: UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let favouriteaction = UIContextualAction(style: .normal, title: String(localized: "view_details")) {
-//            [weak self] (action, view, completionHandler) in
-//            guard let character: Character = self?.eventos[indexPath.row] else { return }
-//            self?.viewDetails(character)
-//            completionHandler(true)
-//        }
-//        favouriteaction.backgroundColor = .systemGray
-//        
-//        return UISwipeActionsConfiguration(actions: [favouriteaction])
-//    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favouriteaction = UIContextualAction(style: .normal, title: String(localized: "view_details")) {
+            (action, view, completionHandler) in
+            guard let evento: Evento? = self.eventos[indexPath.row] else { return }
+            self.viewDetails(evento!)
+            completionHandler(true)
+        }
+        favouriteaction.backgroundColor = UIColor.systemGray
+        
+        return UISwipeActionsConfiguration(actions: [favouriteaction])
+    }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == self.eventos.count-1, self.eventos.count >= 20 {
@@ -115,7 +119,7 @@ extension ListaEventosViewController: UITableViewDelegate {
         self.evntosTableView.deselectRow(at: indexPath, animated: true)
         
         let evento: Evento = self.eventos[indexPath.row]
-        //self.viewDetails(evento)
+        self.viewDetails(evento)
     }
 }
 
@@ -148,6 +152,7 @@ extension ListaEventosViewController: EventoDelegate {
     }
     
     func showError(_ errorCode: Int) {
+        self.activityIndicatorView.hide()
         self.showErrorMessage(errorCode: errorCode)
     }
     
