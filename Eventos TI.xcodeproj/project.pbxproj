@@ -38,6 +38,8 @@
 		D2A7DEF02AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DEEF2AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift */; };
 		D2BB09202BECA70B009E1395 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB091F2BECA70B009E1395 /* CoreDataManager.swift */; };
 		D2E90ABC2C0581D300673F58 /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E90ABB2C0581D300673F58 /* ApiUrls.swift */; };
+		D2E90ABF2C0586B400673F58 /* DetalhesEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E90ABD2C0586B400673F58 /* DetalhesEventoViewController.swift */; };
+		D2E90AC02C0586B400673F58 /* DetalhesEventoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2E90ABE2C0586B400673F58 /* DetalhesEventoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		D2A7DEEF2AF343940083E7F8 /* Eventos_TIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos_TIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2BB091F2BECA70B009E1395 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D2E90ABB2C0581D300673F58 /* ApiUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
+		D2E90ABD2C0586B400673F58 /* DetalhesEventoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesEventoViewController.swift; sourceTree = "<group>"; };
+		D2E90ABE2C0586B400673F58 /* DetalhesEventoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalhesEventoViewController.xib; sourceTree = "<group>"; };
 		F60C7B8B1479318CA46DB47C /* Pods-Eventos TI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventos TI.release.xcconfig"; path = "Target Support Files/Pods-Eventos TI/Pods-Eventos TI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -336,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				D26AA4812BFEED1C00C53A33 /* BaseViewController.swift */,
+				D2E90ABD2C0586B400673F58 /* DetalhesEventoViewController.swift */,
 				D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */,
 				D2A7DECD2AF343930083E7F8 /* ViewController.swift */,
 			);
@@ -346,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				D2167D5B2BFD84090048CE43 /* Cell */,
+				D2E90ABE2C0586B400673F58 /* DetalhesEventoViewController.xib */,
 				D2A7DED72AF343930083E7F8 /* LaunchScreen.storyboard */,
 				D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */,
 				D2A7DECF2AF343930083E7F8 /* Main.storyboard */,
@@ -469,6 +475,7 @@
 				D2A7DED62AF343930083E7F8 /* Assets.xcassets in Resources */,
 				D2A7DED12AF343930083E7F8 /* Main.storyboard in Resources */,
 				D26D6DAA2BEB408A007448A4 /* ListaEventosViewController.xib in Resources */,
+				D2E90AC02C0586B400673F58 /* DetalhesEventoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +610,7 @@
 				D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */,
 				D2E90ABC2C0581D300673F58 /* ApiUrls.swift in Sources */,
 				D26AA4822BFEED1C00C53A33 /* BaseViewController.swift in Sources */,
+				D2E90ABF2C0586B400673F58 /* DetalhesEventoViewController.swift in Sources */,
 				D2167D652BFD8AC90048CE43 /* EventoDelegate.swift in Sources */,
 				D2167D6F2BFD8E330048CE43 /* EventoService.swift in Sources */,
 				D26D6DAD2BEB414A007448A4 /* UIExtension.swift in Sources */,
