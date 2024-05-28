@@ -10,7 +10,7 @@ import Alamofire
 
 class EventoService {
     
-    private let baseURL = "http://localhost:8080"
+    private let baseURL = ApiUrls.baseEventosTIAPIURL()
     
     func buscarEventos(page: Int, completion: @escaping(_ eventos: [Evento], _ error: Int?) -> Void) {
         let path = "\(self.baseURL)/api/evento?page=\(page)"
