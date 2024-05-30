@@ -35,7 +35,7 @@ class BaseViewController: UIViewController {
         let buttonOK = UIAlertAction(title: "OK", style: .cancel)
         
         alert.addAction(buttonOK)
-        present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showErrorMessage(errorCode: Int) {
@@ -53,4 +53,16 @@ class BaseViewController: UIViewController {
         self.showAlert(title: "", message: message)
     }
     
+    func share(text: String) {
+        let textToShare = [ text ]
+        
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        // exclude some activity types from the list (optional)
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }
