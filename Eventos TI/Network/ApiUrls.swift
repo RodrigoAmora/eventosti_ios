@@ -12,7 +12,7 @@ class ApiUrls {
         #if DEBUG
             return "http://localhost:8080"
         #else
-            return "debug222"
+            return "http://eventosti.com.br"
         #endif
     }
 }
