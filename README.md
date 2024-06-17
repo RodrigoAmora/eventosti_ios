@@ -15,7 +15,8 @@ O App usa as seguintes dependências:
 * Sheeeeeeeeet
 * XCTest
 
-# Autor
+Autor:
+------
 <b>Rodrigo Amora</b>
 
 LinkedIn: https://linkedin.com/in/rodrigoamora <br>
