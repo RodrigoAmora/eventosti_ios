@@ -35,19 +35,17 @@ class TableViewCell: UITableViewCell {
         
         self.dataFimValueLabel.textAlignment = .right
         
+        self.dataFimLabel.text = String(localized: "data_fim")
         self.dataFimLabel.textAlignment = .right
         self.dataFimLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
         
+        self.dataInicioLabel.text = String(localized: "data_inicio")
         self.dataInicioLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
     }
     
     func configureCell(_ evento: Evento) {
         self.nomeLabel.text = evento.nome
-        
-        self.dataFimLabel.text = String(localized: "data_fim")
         self.dataFimValueLabel.text = evento.dataFim
-        
-        self.dataInicioLabel.text = String(localized: "data_inicio")
         self.dataInicioValueLabel.text = evento.dataInicio
     }
 }
