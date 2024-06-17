@@ -1,11 +1,9 @@
 # eventosti_ios
 Descrição:
 ----------
-Prpjeto que exibe eventos de TI.
+App que exibe eventos de TI.
 
-O App roda a partir do iOS 15.0, usa a arquitetura MVVVM, Persistência dos dados off-line e Testes de UI.
-
-<hr>
+O projeto roda a partir do iOS 15.0, usa a arquitetura MVVVM, Persistência dos dados off-line e Testes de UI.
 
 Dependências:
 -------------
@@ -20,8 +18,7 @@ O App usa as seguintes dependências:
 # Autor
 <b>Rodrigo Amora</b>
 
-LinkedIn: https://linkedin.com/in/rodrigoamora
-
+LinkedIn: https://linkedin.com/in/rodrigoamora <br>
 E-mail: rodrigo.amora.freitas@gmail.com
 
 <hr>
