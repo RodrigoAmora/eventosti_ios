@@ -127,28 +127,32 @@ extension ListaEventosViewController: UITableViewDelegate {
 // MARK: - EventoDelegate
 extension ListaEventosViewController: EventoDelegate {
     func populateTableView(eventos: [Evento]) {
-        self.activityIndicatorView.hide()
-                
-        self.eventos = eventos
-        self.evntosTableView.reloadData()
-        
-        if page != 0 {
-            let targetRonIdexPath = IndexPath(row: self.eventos.count-5, section: 0)
-            self.evntosTableView.scrollToRow(at: targetRonIdexPath, at: .middle, animated: false)
+        DispatchQueue.main.async {
+            self.activityIndicatorView.hide()
+            
+            self.eventos = eventos
+            self.evntosTableView.reloadData()
+            
+            if self.page != 0 {
+                let targetRonIdexPath = IndexPath(row: self.eventos.count-5, section: 0)
+                self.evntosTableView.scrollToRow(at: targetRonIdexPath, at: .middle, animated: false)
+            }
         }
     }
     
     func replaceAll(eventos: [Evento]) {
-        self.activityIndicatorView.hide()
-                
-        self.eventos.removeAll()
-        self.eventos = eventos
-        self.evntosTableView.reloadData()
-//        self.searchBar.isHidden = true
-        
-        if eventos.count > 10 {
-            let targetRonIdexPath = IndexPath(row: 0, section: 0)
-            self.evntosTableView.scrollToRow(at: targetRonIdexPath, at: .top, animated: false)
+        DispatchQueue.main.async {
+            self.activityIndicatorView.hide()
+            
+            self.eventos.removeAll()
+            self.eventos = eventos
+            self.evntosTableView.reloadData()
+            //        self.searchBar.isHidden = true
+            
+            if eventos.count > 10 {
+                let targetRonIdexPath = IndexPath(row: 0, section: 0)
+                self.evntosTableView.scrollToRow(at: targetRonIdexPath, at: .top, animated: false)
+            }
         }
     }
     
@@ -161,4 +165,10 @@ extension ListaEventosViewController: EventoDelegate {
         self.showAlert(title: "", message: message)
     }
 
+    func noInternet() {
+        DispatchQueue.main.async {
+            self.activityIndicatorView.hide()
+            self.showAlert(title: "", message: String(localized: "no_internet"))
+        }
+    }
 }

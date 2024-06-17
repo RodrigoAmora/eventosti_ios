@@ -12,4 +12,5 @@ protocol EventoDelegate {
     func replaceAll(eventos: [Evento])
     func showError(_ errorCode: Int)
     func showMessage(_ message: String)
+    func noInternet()
 }

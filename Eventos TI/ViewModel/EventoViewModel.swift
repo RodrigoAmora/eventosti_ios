@@ -38,6 +38,7 @@ class EventoViewModel {
                 
                 let eventos = self.eventoRepository.buscarEventosDoBancoDeDados()
                 self.eventoDelegate.populateTableView(eventos: eventos)
+                self.eventoDelegate.noInternet()
             }
         }
         
