@@ -15,6 +15,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var dataInicioValueLabel: UILabel!
     @IBOutlet weak var dataFimLabel: UILabel!
     @IBOutlet weak var dataFimValueLabel: UILabel!
+    @IBOutlet weak var verDetalhesLabel: UILabel!
     
     // MARK: - UITableViewCell
     override func awakeFromNib() {
@@ -41,6 +42,10 @@ class TableViewCell: UITableViewCell {
         
         self.dataInicioLabel.text = String(localized: "data_inicio")
         self.dataInicioLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+        
+        self.verDetalhesLabel.text = String(localized: "view_details")
+        self.verDetalhesLabel.textAlignment = .center
+        self.verDetalhesLabel.textColor = .blue
     }
     
     func configureCell(_ evento: Evento) {
