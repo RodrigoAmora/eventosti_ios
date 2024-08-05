@@ -17,7 +17,6 @@
                 <outlet property="descricaoLabel" destination="LsE-aj-hkH" id="5AE-3P-M7e"/>
                 <outlet property="nomeEventoLabel" destination="8eb-W6-VYc" id="n7J-JY-uwu"/>
                 <outlet property="shareButton" destination="T7u-6I-kf3" id="2s1-Cp-D0L"/>
-                <outlet property="siteLabel" destination="1OH-7r-k5B" id="ab9-c0-kVr"/>
                 <outlet property="siteValorLabel" destination="dQ6-h0-JtS" id="Pwa-Wa-26A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,15 +35,8 @@
                         <action selector="shareEvento:" destination="-1" eventType="touchUpInside" id="rwf-IO-Nh9"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OH-7r-k5B">
-                    <rect key="frame" x="16" y="205" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ6-h0-JtS">
-                    <rect key="frame" x="66" y="204" width="311" height="21"/>
+                    <rect key="frame" x="16" y="204" width="361" height="21"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
