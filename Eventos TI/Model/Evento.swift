@@ -15,7 +15,7 @@ class Evento: NSManagedObject, Decodable {
     // MARK: - Atributes
     @NSManaged var id: Int64
     @NSManaged var nome: String
-    @NSManaged var descricao: String
+    @NSManaged var descricao: String?
     @NSManaged var site: String
     @NSManaged var dataInicio: String
     @NSManaged var dataFim: String
@@ -41,11 +41,16 @@ class Evento: NSManagedObject, Decodable {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             self.id = try container.decode(Int64.self, forKey: .id)
             self.nome = try container.decode(String.self, forKey: .nome)
-            self.descricao = try container.decode(String.self, forKey: .descricao)
             self.site = try container.decode(String.self, forKey: .site)
             self.dataInicio = try container.decode(String.self, forKey: .dataInicio)
             self.dataFim = try container.decode(String.self, forKey: .dataFim)
             self.tipoEvento = try container.decode(String.self, forKey: .tipoEvento)
+            
+            if var descricao =  try container.decodeIfPresent(String.self, forKey: .descricao) {
+                self.descricao = descricao
+            }else {
+                self.descricao = ""
+            }
         } catch {
             print("Error retriving questions \(error)")
         }
