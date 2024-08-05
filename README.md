@@ -3,7 +3,7 @@ Descrição:
 ----------
 App que exibe eventos de TI.
 
-O projeto roda a partir do iOS 15.0, usa a arquitetura MVVVM, Persistência dos dados off-line e Testes de UI.
+O projeto roda a partir do iOS 15.0, usa a arquitetura MVVVM e Persistência de dados off-line.
 
 Dependências:
 -------------
@@ -22,4 +22,3 @@ Autor:
 LinkedIn: https://linkedin.com/in/rodrigoamora <br>
 E-mail: rodrigo.amora.freitas@gmail.com
 
-<hr>
