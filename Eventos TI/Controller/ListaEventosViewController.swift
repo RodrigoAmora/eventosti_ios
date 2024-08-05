@@ -22,6 +22,7 @@ class ListaEventosViewController: BaseViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Eventos TI"
         self.activityIndicatorView.configureActivityIndicatorView()
         self.configureTableView()
         self.configureDelegate()

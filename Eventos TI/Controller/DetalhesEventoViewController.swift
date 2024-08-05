@@ -16,7 +16,6 @@ class DetalhesEventoViewController: BaseViewController {
     @IBOutlet weak var dataInicioValorLabel: UILabel!
     @IBOutlet weak var dataFimLabel: UILabel!
     @IBOutlet weak var dataFimValorLabel: UILabel!
-    @IBOutlet weak var siteLabel: UILabel!
     @IBOutlet weak var siteValorLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
@@ -34,6 +33,7 @@ class DetalhesEventoViewController: BaseViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Eventos TI"
         self.initViews()
     }
 
@@ -42,10 +42,15 @@ class DetalhesEventoViewController: BaseViewController {
         self.nomeEventoLabel.text = self.evento.nome
         self.nomeEventoLabel.textAlignment = .center
         
-        self.descricaoLabel.numberOfLines = 0
-        self.descricaoLabel.lineBreakMode = .byWordWrapping
-        self.descricaoLabel.sizeToFit()
-        self.descricaoLabel.text = self.evento.descricao
+        if ((self.evento.descricao?.isEmpty) != nil) {
+            self.descricaoLabel.text = String(localized: "no_description")
+            self.descricaoLabel.textAlignment = .center
+        } else {
+            self.descricaoLabel.numberOfLines = 0
+            self.descricaoLabel.lineBreakMode = .byWordWrapping
+            self.descricaoLabel.sizeToFit()
+            self.descricaoLabel.text = self.evento.descricao
+        }
         
         self.dataInicioLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
         self.dataInicioLabel.textAlignment = .left
@@ -61,11 +66,8 @@ class DetalhesEventoViewController: BaseViewController {
         self.dataFimValorLabel.textAlignment = .right
         self.dataFimValorLabel.text = self.evento.dataFim
         
-        self.siteLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        self.siteLabel.textAlignment = .left
-        self.siteLabel.text = String(localized: "site")
-        
         self.siteValorLabel.text = self.evento.site
+        self.siteValorLabel.textAlignment = .center
         
         self.shareButton.setTitle("", for: .normal)
         self.shareButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
@@ -75,11 +77,12 @@ class DetalhesEventoViewController: BaseViewController {
     @IBAction func shareEvento(_  sender: UIButton) {
         let baseURL = ApiUrls.baseEventosTIAPIURL()
         
-        let eventoId = evento.id
-        let titulo = evento.nome
+        let eventoId = self.evento.id
+        let titulo = self.evento.nome
         
         let texto = "\(baseURL)/verEvento?id=\(eventoId)"
         
         self.share(text: texto)
     }
+    
 }
