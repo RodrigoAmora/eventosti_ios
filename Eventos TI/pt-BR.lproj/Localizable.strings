@@ -10,6 +10,8 @@
 "site" = "Site:";
 "view_details" = "Ver detalhes";
 
+"no_description" = "Sem descrição";
+
 // ERROS
 "no_internet" = "Sem Internet!";
 

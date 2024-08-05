@@ -10,6 +10,8 @@
 "site" = "Site:";
 "view_details" = "View details";
 
+"no_description" = "No description";
+
 // ERROS
 "no_internet" = "No Internet!";
 
