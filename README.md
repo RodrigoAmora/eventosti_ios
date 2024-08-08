@@ -1,8 +1,7 @@
 # eventosti_ios
 Descrição:
 ----------
-App que exibe eventos de TI.
-
+Projeto que exibe eventos de TI.<br>
 O projeto roda a partir do iOS 15.0, usa a arquitetura MVVVM e Persistência de dados off-line.
 
 Dependências:
