@@ -33,10 +33,17 @@ class DetalhesEventoViewController: BaseViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Eventos TI"
+        self.configureNavigationBar()
         self.initViews()
     }
 
+    // MARK: - Methods
+    private func configureNavigationBar() {
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = String(localized: "back")
+        self.navigationController?.navigationBar.backgroundColor = .green
+        self.navigationItem.title = String(localized: "app_name")
+    }
+    
     private func initViews() {
         self.nomeEventoLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         self.nomeEventoLabel.text = self.evento.nome

@@ -22,18 +22,21 @@ class ListaEventosViewController: BaseViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Eventos TI"
+        self.configureNavigationBar()
         self.activityIndicatorView.configureActivityIndicatorView()
         self.configureTableView()
         self.configureDelegate()
         self.buscarEventos()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
+    override func viewDidAppear(_ animated: Bool) {}
     
     // MARK: - Métodos
+    private func configureNavigationBar() {
+        self.navigationController?.navigationBar.backgroundColor = .green
+        self.navigationItem.title = String(localized: "app_name")
+    }
+    
     private func configureTableView() {
         self.evntosTableView.accessibilityIdentifier = "evntosTableView"
         self.evntosTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
