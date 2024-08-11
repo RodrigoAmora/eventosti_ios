@@ -5,6 +5,10 @@
   Created by Rodrigo Amora on 22/05/24.
   
 */
+"app_name" = "Eventos TI";
+"back" = "Voltar";
+
+
 "data_inicio" = "Data Início:";
 "data_fim" = "Data Fim:";
 "site" = "Site:";
