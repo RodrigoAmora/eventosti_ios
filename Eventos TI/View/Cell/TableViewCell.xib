@@ -24,29 +24,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-H5-S4x">
-                        <rect key="frame" x="5" y="23" width="80" height="21"/>
+                        <rect key="frame" x="5" y="23" width="49" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXW-om-2wa">
-                        <rect key="frame" x="165" y="23" width="80" height="21"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiR-Yx-Sea">
-                        <rect key="frame" x="95" y="23" width="80" height="21"/>
+                        <rect key="frame" x="56" y="23" width="274" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtu-r4-Odc">
-                        <rect key="frame" x="295" y="23" width="50" height="21"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -62,10 +48,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dataFimLabel" destination="tXW-om-2wa" id="PfP-hX-gWK"/>
-                <outlet property="dataFimValueLabel" destination="Vtu-r4-Odc" id="dvy-KC-y04"/>
-                <outlet property="dataInicioLabel" destination="eVk-H5-S4x" id="lrv-z3-Hhu"/>
-                <outlet property="dataInicioValueLabel" destination="fiR-Yx-Sea" id="9fk-MQ-Snf"/>
+                <outlet property="dataLabel" destination="eVk-H5-S4x" id="lrv-z3-Hhu"/>
+                <outlet property="dataValueLabel" destination="fiR-Yx-Sea" id="9fk-MQ-Snf"/>
                 <outlet property="nomeLabel" destination="y0W-jg-fV2" id="mCX-Lh-4sW"/>
                 <outlet property="verDetalhesLabel" destination="RRq-qi-4cL" id="rUB-ts-CXd"/>
             </connections>
