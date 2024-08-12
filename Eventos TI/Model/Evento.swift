@@ -67,4 +67,12 @@ class Evento: NSManagedObject, Decodable {
         case tipoEvento = "tipoEvento"
     }
     
+    // MARK: - Methods
+    func formatarData() -> String {
+        if (self.dataInicio == self.dataFim) {
+            return self.dataInicio
+        } else {
+            return "\(self.dataInicio) - \(self.dataFim)"
+        }
+    }
 }

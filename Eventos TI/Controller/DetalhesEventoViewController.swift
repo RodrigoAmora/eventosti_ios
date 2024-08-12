@@ -61,8 +61,7 @@ class DetalhesEventoViewController: BaseViewController {
         self.dataLabel.textAlignment = .left
         self.dataLabel.text = String(localized: "data")
         
-//        self.dataValorLabel.textAlignment = .right
-        self.dataValorLabel.text = "\(self.evento.dataInicio) - \(self.evento.dataFim)"
+        self.dataValorLabel.text = self.evento.formatarData()
         
         self.siteValorLabel.text = self.evento.site
         self.siteValorLabel.textAlignment = .center
