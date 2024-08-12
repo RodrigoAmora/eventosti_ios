@@ -8,7 +8,7 @@
 "app_name" = "Eventos TI";
 "back" = "Voltar";
 
-
+"data" = "Data:";
 "data_inicio" = "Data Início:";
 "data_fim" = "Data Fim:";
 "site" = "Site:";
