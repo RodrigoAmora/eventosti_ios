@@ -12,10 +12,8 @@ class DetalhesEventoViewController: BaseViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var nomeEventoLabel: UILabel!
     @IBOutlet weak var descricaoLabel: UILabel!
-    @IBOutlet weak var dataInicioLabel: UILabel!
-    @IBOutlet weak var dataInicioValorLabel: UILabel!
-    @IBOutlet weak var dataFimLabel: UILabel!
-    @IBOutlet weak var dataFimValorLabel: UILabel!
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var dataValorLabel: UILabel!
     @IBOutlet weak var siteValorLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
@@ -59,19 +57,12 @@ class DetalhesEventoViewController: BaseViewController {
             self.descricaoLabel.text = self.evento.descricao
         }
         
-        self.dataInicioLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        self.dataInicioLabel.textAlignment = .left
-        self.dataInicioLabel.text = String(localized: "data_inicio")
+        self.dataLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
+        self.dataLabel.textAlignment = .left
+        self.dataLabel.text = String(localized: "data")
         
-        self.dataInicioValorLabel.textAlignment = .right
-        self.dataInicioValorLabel.text = self.evento.dataInicio
-        
-        self.dataFimLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        self.dataFimLabel.textAlignment = .left
-        self.dataFimLabel.text = String(localized: "data_fim")
-        
-        self.dataFimValorLabel.textAlignment = .right
-        self.dataFimValorLabel.text = self.evento.dataFim
+//        self.dataValorLabel.textAlignment = .right
+        self.dataValorLabel.text = "\(self.evento.dataInicio) - \(self.evento.dataFim)"
         
         self.siteValorLabel.text = self.evento.site
         self.siteValorLabel.textAlignment = .center
