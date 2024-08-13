@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaEventosViewController" customModule="Eventos_TI" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorView" destination="Fu9-Et-YA2" id="hLC-Od-z94"/>
+                <outlet property="eventosSearchBar" destination="xp6-tf-B8G" id="1cj-ht-PU7"/>
                 <outlet property="evntosTableView" destination="NKo-Wn-gIo" id="MdZ-cu-GVI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,6 +30,14 @@
                     <rect key="frame" x="179" y="409" width="35" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                 </activityIndicatorView>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xp6-tf-B8G">
+                    <rect key="frame" x="0.0" y="90" width="393" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="sQx-X4-Xxy"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
