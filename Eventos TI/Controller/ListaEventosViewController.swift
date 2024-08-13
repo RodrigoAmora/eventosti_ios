@@ -6,24 +6,29 @@
 //
 import Foundation
 import UIKit
+import MaterialComponents.MaterialButtons
 
 class ListaEventosViewController: BaseViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var evntosTableView: UITableView!
+    @IBOutlet weak var eventosSearchBar: UISearchBar!
     
     // MARK: - Atributos
     private var eventos: [Evento] = []
     private lazy var eventoViewModel: EventoViewModel = EventoViewModel(eventoDelegate: self)
     private let refreshControl = UIRefreshControl()
+    private var fab: MDCFloatingButton!
     private var page = 0
     
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureNavigationBar()
         self.activityIndicatorView.configureActivityIndicatorView()
+        self.configureNavigationBar()
+        self.configureSearchBar()
+        self.configureFloatingButton()
         self.configureTableView()
         self.configureDelegate()
         self.buscarEventos()
@@ -35,6 +40,13 @@ class ListaEventosViewController: BaseViewController {
     private func configureNavigationBar() {
         self.navigationController?.navigationBar.backgroundColor = .green
         self.navigationItem.title = String(localized: "app_name")
+    }
+    
+    private func configureSearchBar() {
+        self.eventosSearchBar.accessibilityIdentifier = "eventosSearchBar"
+        self.eventosSearchBar.showsLargeContentViewer = true
+        self.eventosSearchBar.isHidden = true
+        self.eventosSearchBar.placeholder = String(localized: "search_event_by_name")
     }
     
     private func configureTableView() {
@@ -49,14 +61,34 @@ class ListaEventosViewController: BaseViewController {
         self.refreshControl.endRefreshing()
     }
     
+    private func configureFloatingButton() {
+        let widwonWidth = UIScreen.main.bounds.width - 50 - 25
+        let windowHeight = UIScreen.main.bounds.height - 50 - 25
+        
+        self.fab = MDCFloatingButton(frame: CGRect(x: widwonWidth, y: windowHeight, width: 50, height: 50))
+        self.fab.backgroundColor = .green
+        self.fab.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        self.fab.addTarget(self, action: #selector(showOrHideSearchView), for: .touchUpInside)
+        self.fab.accessibilityIdentifier = "fabSearchBar"
+        
+        self.view.addSubview(self.fab)
+        }
+    
     private func configureDelegate() {
         self.evntosTableView.dataSource = self
         self.evntosTableView.delegate = self
+        
+        self.eventosSearchBar.delegate = self
     }
     
     private func buscarEventos() {
         self.activityIndicatorView.show()
         self.eventoViewModel.buscarEventos(page: self.page)
+    }
+    
+    private func buscarEventosPeloNome(nome: String) {
+        self.activityIndicatorView.show()
+        self.eventoViewModel.buscarEventosPeloNome(nome: nome, page: self.page)
     }
     
     private func viewDetails(_ evento: Evento) {
@@ -74,6 +106,14 @@ class ListaEventosViewController: BaseViewController {
         self.page += 1
         self.buscarEventos()
         self.refreshControl.endRefreshing()
+    }
+    
+    @objc func showOrHideSearchView() {
+        if self.eventosSearchBar.isHidden {
+            self.eventosSearchBar.isHidden = false
+        } else {
+            self.eventosSearchBar.isHidden = true
+        }
     }
 }
 
@@ -125,6 +165,15 @@ extension ListaEventosViewController: UITableViewDelegate {
         
         let evento: Evento = self.eventos[indexPath.row]
         self.viewDetails(evento)
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension ListaEventosViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.hideKeyboard()
+        let nomeEvento = searchBar.text?.replacingOccurrences(of: " ", with: "%20") ?? ""
+        self.buscarEventosPeloNome(nome: nomeEvento)
     }
 }
 

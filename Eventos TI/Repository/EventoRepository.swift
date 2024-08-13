@@ -29,6 +29,16 @@ class EventoRepository {
         })
     }
     
+    func buscarEventosPeloNome(nome: String, page: Int, completion: @escaping(_ resource: Resource<[Evento]?>) -> Void) {
+        self.eventoService.buscarEventosPeloNome(nome: nome, page: page, completion: { eventos, error in
+            if eventos.count == 0 {
+                completion(Resource(result: nil, errorCode: error))
+            } else {
+                completion(Resource(result: eventos))
+            }
+        })
+    }
+    
     func buscarEventosDoBancoDeDados() -> [Evento] {
         return EventoDao.buscarEventos()
     }

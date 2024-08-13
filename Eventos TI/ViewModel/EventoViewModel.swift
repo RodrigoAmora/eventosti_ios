@@ -46,4 +46,30 @@ class EventoViewModel {
         monitor.start(queue: queue)
     }
     
+    func buscarEventosPeloNome(nome: String, page: Int) {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                self.eventoRepository.buscarEventosPeloNome(nome: nome, page: page, completion: { resource in
+                    guard let eventos: [Evento] = resource.result ?? [] else { return }
+                    
+                    if eventos.count == 0 {
+                        self.eventoDelegate.showError(resource.errorCode ?? 0)
+                    } else {
+                        self.eventoDelegate.populateTableView(eventos: eventos)
+                    }
+                })
+            } else {
+                print("Internet connection is not available.")
+                
+                let eventos = self.eventoRepository.buscarEventosDoBancoDeDados()
+                self.eventoDelegate.populateTableView(eventos: eventos)
+                self.eventoDelegate.noInternet()
+            }
+        }
+        
+        let queue = DispatchQueue(label: "NetworkMonitor")
+        monitor.start(queue: queue)
+    }
+    
 }
