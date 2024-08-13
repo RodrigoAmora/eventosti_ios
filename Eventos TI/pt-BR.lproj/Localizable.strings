@@ -16,6 +16,8 @@
 
 "no_description" = "Sem descrição";
 
+"search_event_by_name" = "Buscar evento pelo nome....";
+
 // ERROS
 "no_internet" = "Sem Internet!";
 
