@@ -56,7 +56,7 @@ class EventoViewModel {
                     if eventos.count == 0 {
                         self.eventoDelegate.showError(resource.errorCode ?? 0)
                     } else {
-                        self.eventoDelegate.populateTableView(eventos: eventos)
+                        self.eventoDelegate.replaceAll(eventos: eventos)
                     }
                 })
             } else {
