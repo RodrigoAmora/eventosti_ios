@@ -27,6 +27,7 @@ class ListaEventosViewController: BaseViewController {
         super.viewDidLoad()
         self.activityIndicatorView.configureActivityIndicatorView()
         self.configureNavigationBar()
+        self.configureRightBarButtonItem()
         self.configureSearchBar()
         self.configureFloatingButton()
         self.configureTableView()
@@ -72,7 +73,19 @@ class ListaEventosViewController: BaseViewController {
         self.fab.accessibilityIdentifier = "fabSearchBar"
         
         self.view.addSubview(self.fab)
+    }
+    
+    private func configureRightBarButtonItem() {
+        let about = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle.fill")) { _ in
+//            self.changeViewControllerWithPresent(AboutViewController())
         }
+        
+        let btRightMenu = UIBarButtonItem()
+        btRightMenu.image = UIImage(systemName: "text.justify")
+        btRightMenu.menu = UIMenu(title: "", children: [about])
+        
+        self.navigationItem.rightBarButtonItem = btRightMenu
+    }
     
     private func configureDelegate() {
         self.evntosTableView.dataSource = self
@@ -110,9 +123,9 @@ class ListaEventosViewController: BaseViewController {
     
     @objc func showOrHideSearchView() {
         if self.eventosSearchBar.isHidden {
-            self.eventosSearchBar.isHidden = false
+            self.eventosSearchBar.show()
         } else {
-            self.eventosSearchBar.isHidden = true
+            self.eventosSearchBar.hide()
         }
     }
 }
@@ -182,6 +195,7 @@ extension ListaEventosViewController: EventoDelegate {
     func populateTableView(eventos: [Evento]) {
         DispatchQueue.main.async {
             self.activityIndicatorView.hide()
+            self.eventosSearchBar.hide()
             
             self.eventos = eventos
             self.evntosTableView.reloadData()
@@ -196,11 +210,11 @@ extension ListaEventosViewController: EventoDelegate {
     func replaceAll(eventos: [Evento]) {
         DispatchQueue.main.async {
             self.activityIndicatorView.hide()
+            self.eventosSearchBar.hide()
             
             self.eventos.removeAll()
             self.eventos = eventos
             self.evntosTableView.reloadData()
-            //        self.searchBar.isHidden = true
             
             if eventos.count > 10 {
                 let targetRonIdexPath = IndexPath(row: 0, section: 0)
