@@ -59,7 +59,7 @@ class EventoService {
     }
     
     func buscarEventosPeloNome(nome: String, page: Int, completion: @escaping(_ eventos: [Evento], _ error: Int?) -> Void) {
-        let path = "\(self.baseURL)/api/evento/\(nome)?page=\(page)"
+        let path = "\(self.baseURL)/api/evento/\(nome)/buscarPorNome?page=\(page)"
         
         AF.request(path,
                    method: .get,
