@@ -18,6 +18,9 @@
 
 "search_event_by_name" = "Search event by name....";
 
+// MENU
+"menu_about" = "About";
+
 // ERROS
 "no_internet" = "No Internet!";
 
