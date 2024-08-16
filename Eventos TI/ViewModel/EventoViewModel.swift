@@ -52,9 +52,13 @@ class EventoViewModel {
             if path.status == .satisfied {
                 self.eventoRepository.buscarEventosPeloNome(nome: nome, page: page, completion: { resource in
                     guard let eventos: [Evento] = resource.result ?? [] else { return }
-                    
+
                     if eventos.count == 0 {
-                        self.eventoDelegate.showError(resource.errorCode ?? 0)
+                        if resource.errorCode != nil {
+                            self.eventoDelegate.showError(resource.errorCode ?? 0)
+                        } else {
+                            self.eventoDelegate.showMessage(String(localized: "error_not_found"))
+                        }
                     } else {
                         self.eventoDelegate.replaceAll(eventos: eventos)
                     }
