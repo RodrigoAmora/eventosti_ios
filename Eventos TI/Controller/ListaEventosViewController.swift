@@ -225,10 +225,13 @@ extension ListaEventosViewController: EventoDelegate {
     
     func showError(_ errorCode: Int) {
         self.activityIndicatorView.hide()
+        self.eventosSearchBar.hide()
         self.showErrorMessage(errorCode: errorCode)
     }
     
     func showMessage(_ message: String) {
+        self.activityIndicatorView.hide()
+        self.eventosSearchBar.hide()
         self.showAlert(title: "", message: message)
     }
 
