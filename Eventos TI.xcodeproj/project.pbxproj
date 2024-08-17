@@ -26,6 +26,8 @@
 		D26D6DAA2BEB408A007448A4 /* ListaEventosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */; };
 		D26D6DAD2BEB414A007448A4 /* UIActivityIndicatorViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D6DAC2BEB414A007448A4 /* UIActivityIndicatorViewExtension.swift */; };
 		D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FFAE82BE9EBB300C68661 /* Evento.swift */; };
+		D28040A32C704F4E00D0CE32 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28040A12C704F4E00D0CE32 /* SobreViewController.swift */; };
+		D28040A42C704F4E00D0CE32 /* SobreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28040A22C704F4E00D0CE32 /* SobreViewController.xib */; };
 		D2918D212C6DB04200718B4A /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2918D202C6DB04200718B4A /* UISearchBarExtension.swift */; };
 		D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */; };
 		D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */; };
@@ -87,6 +89,8 @@
 		D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaEventosViewController.xib; sourceTree = "<group>"; };
 		D26D6DAC2BEB414A007448A4 /* UIActivityIndicatorViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewExtension.swift; sourceTree = "<group>"; };
 		D26FFAE82BE9EBB300C68661 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		D28040A12C704F4E00D0CE32 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		D28040A22C704F4E00D0CE32 /* SobreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SobreViewController.xib; sourceTree = "<group>"; };
 		D2918D202C6DB04200718B4A /* UISearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
 		D2A7DEC62AF343930083E7F8 /* Eventos TI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventos TI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -348,6 +352,7 @@
 				D26AA4812BFEED1C00C53A33 /* BaseViewController.swift */,
 				D2E90ABD2C0586B400673F58 /* DetalhesEventoViewController.swift */,
 				D26D6DA72BEB408A007448A4 /* ListaEventosViewController.swift */,
+				D28040A12C704F4E00D0CE32 /* SobreViewController.swift */,
 				D2A7DECD2AF343930083E7F8 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -361,6 +366,7 @@
 				D2A7DED72AF343930083E7F8 /* LaunchScreen.storyboard */,
 				D26D6DA82BEB408A007448A4 /* ListaEventosViewController.xib */,
 				D2A7DECF2AF343930083E7F8 /* Main.storyboard */,
+				D28040A22C704F4E00D0CE32 /* SobreViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 			files = (
 				D2A7DED92AF343930083E7F8 /* LaunchScreen.storyboard in Resources */,
 				D2167D792BFDAB540048CE43 /* Localizable.strings in Resources */,
+				D28040A42C704F4E00D0CE32 /* SobreViewController.xib in Resources */,
 				D2167D5F2BFD842A0048CE43 /* TableViewCell.xib in Resources */,
 				D2A7DED62AF343930083E7F8 /* Assets.xcassets in Resources */,
 				D2A7DED12AF343930083E7F8 /* Main.storyboard in Resources */,
@@ -627,6 +634,7 @@
 				D2BB09202BECA70B009E1395 /* CoreDataManager.swift in Sources */,
 				D2167D6C2BFD8D970048CE43 /* EventoResponse.swift in Sources */,
 				D2167D682BFD8C080048CE43 /* EventoRepository.swift in Sources */,
+				D28040A32C704F4E00D0CE32 /* SobreViewController.swift in Sources */,
 				D2167D622BFD8A5C0048CE43 /* EventoViewModel.swift in Sources */,
 				D2FBA3A12C60727D00F742F0 /* UIViewExtension.swift in Sources */,
 				D26FFAE92BE9EBB300C68661 /* Evento.swift in Sources */,
