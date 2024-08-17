@@ -26,23 +26,21 @@ class ListaEventosViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicatorView.configureActivityIndicatorView()
-        self.configureNavigationBar()
-        self.configureRightBarButtonItem()
         self.configureSearchBar()
         self.configureFloatingButton()
         self.configureTableView()
         self.configureDelegate()
         self.buscarEventos()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.configureNavigationBarAndRightBarButtonItem()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {}
     
     // MARK: - Métodos
-    private func configureNavigationBar() {
-        self.navigationController?.navigationBar.backgroundColor = .green
-        self.navigationItem.title = String(localized: "app_name")
-    }
-    
     private func configureSearchBar() {
         self.eventosSearchBar.accessibilityIdentifier = "eventosSearchBar"
         self.eventosSearchBar.showsLargeContentViewer = true
@@ -75,9 +73,22 @@ class ListaEventosViewController: BaseViewController {
         self.view.addSubview(self.fab)
     }
     
-    private func configureRightBarButtonItem() {
+    private func configureNavigationBarAndRightBarButtonItem() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.green
+
+        let textColor = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        appearance.titleTextAttributes = textColor
+        
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        self.navigationController?.navigationBar.tintColor = .black
+        
+        self.navigationItem.title = String(localized: "app_name")
+        
         let about = UIAction(title: String(localized: "menu_about"), image: UIImage(systemName: "info.circle.fill")) { _ in
-//            self.changeViewControllerWithPresent(AboutViewController())
+            self.changeViewControllerWithPresent(SobreViewController())
         }
         
         let btRightMenu = UIBarButtonItem()
