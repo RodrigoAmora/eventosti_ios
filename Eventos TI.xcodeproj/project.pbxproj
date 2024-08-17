@@ -263,8 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				D26D6DAC2BEB414A007448A4 /* UIActivityIndicatorViewExtension.swift */,
-				D2FBA3A02C60727D00F742F0 /* UIViewExtension.swift */,
 				D2918D202C6DB04200718B4A /* UISearchBarExtension.swift */,
+				D2FBA3A02C60727D00F742F0 /* UIViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
