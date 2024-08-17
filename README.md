@@ -1,8 +1,8 @@
 # eventosti_ios
 Descrição:
 ----------
-Projeto que exibe eventos de TI.<br>
-O projeto roda a partir do iOS 15.0, usa a arquitetura MVVVM e Persistência de dados off-line.
+Projeto para divlugação de eventos de tecnologia.<br><br>
+O projeto roda a partir do iOS 17.0, usa a arquitetura MVVVM e Persistência de dados off-line.
 
 Dependências:
 -------------
