@@ -21,6 +21,14 @@
 // MENU
 "menu_about" = "Sobre";
 
+// SOBRE
+"version_app" = "Versão: %@";
+"site_app" = "Site: www.eventosti.com.br";
+
+"created_by" = "Criado por Rodrigo Amora.";
+"email_author" = "rodrigo.amora.freitas@gmail.com";
+"site_author" = "www.rodrigoamora.com.br";
+
 // ERROS
 "no_internet" = "Sem Internet!";
 
