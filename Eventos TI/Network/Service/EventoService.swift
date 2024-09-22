@@ -13,7 +13,7 @@ class EventoService {
     private let baseURL = ApiUrls.baseEventosTIAPIURL()
     
     func buscarEventos(page: Int, completion: @escaping(_ eventos: [Evento], _ error: Int?) -> Void) {
-        let path = "\(self.baseURL)/api/evento?page=\(page)"
+        let path = "\(self.baseURL)/evento?page=\(page)"
         
         AF.request(path,
                    method: .get,
@@ -51,7 +51,7 @@ class EventoService {
                                 break
                         }
                     
-                case .failure(_):
+                    case .failure(_):
                         completion([], 0)
                         break
                 }
@@ -59,14 +59,14 @@ class EventoService {
     }
     
     func buscarEventosPeloNome(nome: String, page: Int, completion: @escaping(_ eventos: [Evento]?, _ error: Int?) -> Void) {
-        let path = "\(self.baseURL)/api/evento/buscarPorNome?nome=\(nome)&page=\(page)"
+        let path = "\(self.baseURL)/evento/buscarPorNome?nome=\(nome)&page=\(page)"
         
         AF.request(path,
                    method: .get,
                    encoding: URLEncoding.default)
             .response{ response in
                 switch response.result {
-                case .success(_):
+                    case .success(_):
                         switch response.response?.statusCode {
                             case 200:
                                 guard let data = response.data else { return }
