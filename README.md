@@ -14,13 +14,16 @@ O App usa as seguintes dependências:
 * Sheeeeeeeeet
 * XCTest
 
+Acesso ao projeto:
+------------------
+Disponível em:
+```shell script
+https://apps.apple.com/us/app/eventos-ti/id6630363975
+```
+
 Autor:
 ------
 <b>Rodrigo Amora</b>
 
 LinkedIn: https://linkedin.com/in/rodrigoamora <br>
 E-mail: rodrigo.amora.freitas@gmail.com
-
-Acesso ao projeto:
-------------------
-Disponível em: https://apps.apple.com/us/app/eventos-ti/id6630363975
