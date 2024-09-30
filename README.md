@@ -16,10 +16,8 @@ O App usa as seguintes dependências:
 
 Acesso ao projeto:
 ------------------
-Disponível em:
-```shell script
+O projeto está disponível através do endereço:<br>
 https://apps.apple.com/us/app/eventos-ti/id6630363975
-```
 
 Autor:
 ------
