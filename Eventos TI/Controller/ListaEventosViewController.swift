@@ -19,7 +19,9 @@ class ListaEventosViewController: BaseViewController {
     private var eventos: [Evento] = []
     private lazy var eventoViewModel: EventoViewModel = EventoViewModel(eventoDelegate: self)
     private let refreshControl = UIRefreshControl()
-    private var fab: MDCFloatingButton!
+    private var fbBuscarEventosPorNome: MDCFloatingButton!
+    private var fbListarTodosEventos: MDCFloatingButton!
+    
     private var page = 0
     
     // MARK: - View life cycle
@@ -64,13 +66,21 @@ class ListaEventosViewController: BaseViewController {
         let widwonWidth = UIScreen.main.bounds.width - 50 - 25
         let windowHeight = UIScreen.main.bounds.height - 50 - 25
         
-        self.fab = MDCFloatingButton(frame: CGRect(x: widwonWidth, y: windowHeight, width: 50, height: 50))
-        self.fab.backgroundColor = .green
-        self.fab.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
-        self.fab.addTarget(self, action: #selector(showOrHideSearchView), for: .touchUpInside)
-        self.fab.accessibilityIdentifier = "fabSearchBar"
+        self.fbBuscarEventosPorNome = MDCFloatingButton(frame: CGRect(x: widwonWidth, y: windowHeight, width: 50, height: 50))
+        self.fbBuscarEventosPorNome.backgroundColor = .green
+        self.fbBuscarEventosPorNome.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        self.fbBuscarEventosPorNome.addTarget(self, action: #selector(showOrHideSearchView), for: .touchUpInside)
+        self.fbBuscarEventosPorNome.accessibilityIdentifier = "fabSearchBar"
         
-        self.view.addSubview(self.fab)
+        self.view.addSubview(self.fbBuscarEventosPorNome)
+        
+        self.fbListarTodosEventos = MDCFloatingButton(frame: CGRect(x: widwonWidth, y: windowHeight-60, width: 50, height: 50))
+        self.fbListarTodosEventos.backgroundColor = .green
+        self.fbListarTodosEventos.setImage(UIImage(systemName: "repeat"), for: .normal)
+        self.fbListarTodosEventos.addTarget(self, action: #selector(buscarEventos), for: .touchUpInside)
+        self.fbListarTodosEventos.accessibilityIdentifier = "fbListarTodosEventos"
+        
+        self.view.addSubview(self.fbListarTodosEventos)
     }
     
     private func configureNavigationBarAndRightBarButtonItem() {
@@ -105,7 +115,7 @@ class ListaEventosViewController: BaseViewController {
         self.eventosSearchBar.delegate = self
     }
     
-    private func buscarEventos() {
+    @objc private func buscarEventos() {
         self.activityIndicatorView.show()
         self.eventoViewModel.buscarEventos(page: self.page)
     }
