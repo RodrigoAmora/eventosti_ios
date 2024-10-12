@@ -23,7 +23,6 @@ class EventoRepository {
                 completion(Resource(result: nil, errorCode: error))
             } else {
                 self.apagarTodos()
-                //self.salvarEventos(eventos)
                 completion(Resource(result: eventos))
             }
         })
