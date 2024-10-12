@@ -38,8 +38,8 @@ class EventoService {
                                 completion([], 401)
                                 break
                             
-                            case 403:
-                                completion([], 403)
+                            case 404:
+                                completion([], 404)
                                 break
                             
                             case 500:
@@ -51,9 +51,9 @@ class EventoService {
                                 break
                         }
                     
-                    case .failure(_):
-                        completion([], 0)
-                        break
+                        case .failure(_):
+                            completion([], 0)
+                            break
                 }
             }
     }
@@ -89,7 +89,7 @@ class EventoService {
                                 break
                             
                             case 404:
-                                completion([], 403)
+                                completion([], 404)
                                 break
                             
                             case 500:
@@ -101,9 +101,9 @@ class EventoService {
                                 break
                         }
                     
-                    case .failure(_):
-                        completion(nil, 0)
-                        break
+                        case .failure(_):
+                            completion(nil, 0)
+                            break
                 }
             }
     }
