@@ -6,7 +6,7 @@ O projeto roda a partir do iOS 17.0, usa a arquitetura MVVVM e Persistência de 
 
 Dependências:
 -------------
-O App usa as seguintes dependências:
+O projeto usa as seguintes dependências:
 
 * Alamofire
 * MaterialComponents/Buttons
