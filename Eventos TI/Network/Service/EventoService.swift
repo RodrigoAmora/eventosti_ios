@@ -89,7 +89,7 @@ class EventoService {
                                 break
                             
                             case 404:
-                                completion([], 404)
+                                completion(nil, 404)
                                 break
                             
                             case 500:
