@@ -185,6 +185,16 @@ extension ListaEventosViewController: UITableViewDataSource {
         if indexPath.row == self.eventos.count-1, self.eventos.count >= 20 {
             self.paginateTableView()
         }
+        
+        if let lastCellRowIndex = tableView.indexPathsForVisibleRows?.last?.row {
+            if self.eventos.count - 1 > lastCellRowIndex + 1 {
+                self.fbBuscarEventosPorNome?.isHidden = false
+                self.fbListarTodosEventos?.isHidden = false
+            } else {
+                self.fbBuscarEventosPorNome?.isHidden = true
+                self.fbListarTodosEventos?.isHidden = true
+            }
+        }
     }
 }
 
