@@ -11,7 +11,6 @@ class TableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
     @IBOutlet weak var nomeLabel: UILabel!
-    @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var dataValueLabel: UILabel!
     @IBOutlet weak var verDetalhesLabel: UILabel!
     
@@ -30,9 +29,6 @@ class TableViewCell: UITableViewCell {
         self.nomeLabel.textAlignment = .center
         self.nomeLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
-        self.dataLabel.text = String(localized: "data")
-        self.dataLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        
         self.verDetalhesLabel.text = String(localized: "view_details")
         self.verDetalhesLabel.textAlignment = .center
         self.verDetalhesLabel.textColor = .blue
@@ -40,6 +36,9 @@ class TableViewCell: UITableViewCell {
     
     func configureCell(_ evento: Evento) {
         self.nomeLabel.text = evento.nome
-        self.dataValueLabel.text = evento.formatarData()
+        
+        let data = String(localized: "data_evento")
+        self.dataValueLabel.text = String(format: data, evento.formatarData())
+        self.dataValueLabel.textAlignment = .center
     }
 }
