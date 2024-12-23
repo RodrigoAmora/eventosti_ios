@@ -9,6 +9,7 @@
 "back" = "Back";
 
 "data" = "Date:";
+"data_evento" = "Date: %@";
 "data_inicio" = "Date Start:";
 "data_fim" = "Date End:";
 "site" = "Site:";

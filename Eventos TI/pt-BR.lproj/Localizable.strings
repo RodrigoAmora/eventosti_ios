@@ -9,6 +9,7 @@
 "back" = "Voltar";
 
 "data" = "Data:";
+"data_evento" = "Data: %@";
 "data_inicio" = "Data Início:";
 "data_fim" = "Data Fim:";
 "site" = "Site:";
