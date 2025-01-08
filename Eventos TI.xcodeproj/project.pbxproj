@@ -29,6 +29,7 @@
 		D28040A32C704F4E00D0CE32 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28040A12C704F4E00D0CE32 /* SobreViewController.swift */; };
 		D28040A42C704F4E00D0CE32 /* SobreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28040A22C704F4E00D0CE32 /* SobreViewController.xib */; };
 		D2918D212C6DB04200718B4A /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2918D202C6DB04200718B4A /* UISearchBarExtension.swift */; };
+		D297DF422D2F012A0069B508 /* TipoEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297DF412D2F012A0069B508 /* TipoEvento.swift */; };
 		D2A7DECA2AF343930083E7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */; };
 		D2A7DECC2AF343930083E7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */; };
 		D2A7DECE2AF343930083E7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DECD2AF343930083E7F8 /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		D28040A12C704F4E00D0CE32 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
 		D28040A22C704F4E00D0CE32 /* SobreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SobreViewController.xib; sourceTree = "<group>"; };
 		D2918D202C6DB04200718B4A /* UISearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
+		D297DF412D2F012A0069B508 /* TipoEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoEvento.swift; sourceTree = "<group>"; };
 		D2A7DEC62AF343930083E7F8 /* Eventos TI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventos TI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A7DEC92AF343930083E7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A7DECB2AF343930083E7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				D26FFAE82BE9EBB300C68661 /* Evento.swift */,
+				D297DF412D2F012A0069B508 /* TipoEvento.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				D2E90ABC2C0581D300673F58 /* ApiUrls.swift in Sources */,
 				D26AA4822BFEED1C00C53A33 /* BaseViewController.swift in Sources */,
 				D2E90ABF2C0586B400673F58 /* DetalhesEventoViewController.swift in Sources */,
+				D297DF422D2F012A0069B508 /* TipoEvento.swift in Sources */,
 				D2167D652BFD8AC90048CE43 /* EventoDelegate.swift in Sources */,
 				D2167D6F2BFD8E330048CE43 /* EventoService.swift in Sources */,
 				D26D6DAD2BEB414A007448A4 /* UIActivityIndicatorViewExtension.swift in Sources */,
