@@ -19,6 +19,10 @@
 
 "search_event_by_name" = "Search event by name....";
 
+"hibrido" = "Hybrid";
+"on_line" = "On-Line";
+"presencial" = "In Person";
+
 // MENU
 "menu_about" = "About";
 
