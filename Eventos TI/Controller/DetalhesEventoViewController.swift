@@ -15,6 +15,7 @@ class DetalhesEventoViewController: BaseViewController {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var dataValorLabel: UILabel!
     @IBOutlet weak var siteValorLabel: UILabel!
+    @IBOutlet weak var tipoEventoLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
     // MARK: - Atributes
@@ -58,16 +59,31 @@ class DetalhesEventoViewController: BaseViewController {
         }
         
         self.dataLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        self.dataLabel.textAlignment = .left
+        self.dataLabel.textAlignment = .center
         self.dataLabel.text = String(localized: "data")
         
         self.dataValorLabel.text = self.evento.formatarData()
+        self.dataValorLabel.textAlignment = .center
         
         self.siteValorLabel.text = self.evento.site
         self.siteValorLabel.textAlignment = .center
         
         self.shareButton.setTitle("", for: .normal)
         self.shareButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        
+        let tipoEvento = switch(evento.tipoEvento) {
+            case TipoEvento.HIBRIDO.rawValue:
+                String(localized: "hibrido")
+            case TipoEvento.PRESENCIAL.rawValue:
+                String(localized: "presencial")
+            case TipoEvento.ON_LINE.rawValue:
+                String(localized: "on_line")
+            default:
+                ""
+        }
+        
+        self.tipoEventoLabel.text = tipoEvento
+        self.tipoEventoLabel.textAlignment = .center
     }
     
     // MARK: - IBActions
@@ -75,7 +91,6 @@ class DetalhesEventoViewController: BaseViewController {
         let baseURL = ApiUrls.baseEventosTIAPIURL()
         
         let eventoId = self.evento.id
-        let titulo = self.evento.nome
         
         let texto = "\(baseURL)/verEvento?id=\(eventoId)"
         
