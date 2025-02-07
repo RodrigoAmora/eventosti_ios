@@ -44,6 +44,17 @@ class ListaEventosViewController: BaseViewController {
     
     // MARK: - Métodos
     private func configureSearchBar() {
+        switch UIDevice.current.userInterfaceIdiom {
+            case .pad:
+                self.eventosSearchBar.frame.origin.y = 75
+            
+            case .phone:
+                self.eventosSearchBar.frame.origin.y = 95
+            
+            default:
+                self.eventosSearchBar.frame.origin.y = 85
+        }
+        
         self.eventosSearchBar.accessibilityIdentifier = "eventosSearchBar"
         self.eventosSearchBar.showsLargeContentViewer = true
         self.eventosSearchBar.isHidden = true
@@ -186,15 +197,15 @@ extension ListaEventosViewController: UITableViewDataSource {
             self.paginateTableView()
         }
         
-        if let lastCellRowIndex = tableView.indexPathsForVisibleRows?.last?.row {
-            if self.eventos.count - 1 > lastCellRowIndex + 1 {
-                self.fbBuscarEventosPorNome?.isHidden = false
-                self.fbListarTodosEventos?.isHidden = false
-            } else {
-                self.fbBuscarEventosPorNome?.isHidden = true
-                self.fbListarTodosEventos?.isHidden = true
-            }
-        }
+//        if let lastCellRowIndex = tableView.indexPathsForVisibleRows?.last?.row {
+//            if self.eventos.count - 1 > lastCellRowIndex + 1 {
+//                self.fbBuscarEventosPorNome?.isHidden = false
+//                self.fbListarTodosEventos?.isHidden = false
+//            } else {
+//                self.fbBuscarEventosPorNome?.isHidden = true
+//                self.fbListarTodosEventos?.isHidden = true
+//            }
+//        }
     }
 }
 
