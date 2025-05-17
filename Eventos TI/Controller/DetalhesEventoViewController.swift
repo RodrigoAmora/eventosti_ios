@@ -25,7 +25,6 @@ class DetalhesEventoViewController: BaseViewController {
    class func intanciate(_ evento: Evento) -> DetalhesEventoViewController {
        let controller = DetalhesEventoViewController()
        controller.evento = evento
-       
        return controller
    }
     
@@ -48,14 +47,15 @@ class DetalhesEventoViewController: BaseViewController {
         self.nomeEventoLabel.text = self.evento.nome
         self.nomeEventoLabel.textAlignment = .center
         
-        if ((self.evento.descricao?.isEmpty) != nil) {
+        let descricaoDoEvento = evento.descricao ?? ""
+        if (descricaoDoEvento.isEmpty) {
             self.descricaoLabel.text = String(localized: "no_description")
             self.descricaoLabel.textAlignment = .center
         } else {
             self.descricaoLabel.numberOfLines = 0
             self.descricaoLabel.lineBreakMode = .byWordWrapping
             self.descricaoLabel.sizeToFit()
-            self.descricaoLabel.text = self.evento.descricao
+            self.descricaoLabel.text = descricaoDoEvento
         }
         
         self.dataLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
@@ -79,7 +79,7 @@ class DetalhesEventoViewController: BaseViewController {
             case TipoEvento.ON_LINE.rawValue:
                 String(localized: "on_line")
             default:
-                ""
+                String(localized: "on_line")
         }
         
         self.tipoEventoLabel.text = tipoEvento
