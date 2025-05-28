@@ -197,15 +197,15 @@ extension ListaEventosViewController: UITableViewDataSource {
             self.paginateTableView()
         }
         
-//        if let lastCellRowIndex = tableView.indexPathsForVisibleRows?.last?.row {
-//            if self.eventos.count - 1 > lastCellRowIndex + 1 {
-//                self.fbBuscarEventosPorNome?.isHidden = false
-//                self.fbListarTodosEventos?.isHidden = false
-//            } else {
-//                self.fbBuscarEventosPorNome?.isHidden = true
-//                self.fbListarTodosEventos?.isHidden = true
-//            }
-//        }
+        if let lastCellRowIndex = tableView.indexPathsForVisibleRows?.last?.row {
+            if self.eventos.count - 1 > lastCellRowIndex + 1 {
+                self.fbBuscarEventosPorNome?.isHidden = false
+                self.fbListarTodosEventos?.isHidden = false
+            } else {
+                self.fbBuscarEventosPorNome?.isHidden = true
+                self.fbListarTodosEventos?.isHidden = true
+            }
+        }
     }
 }
 
