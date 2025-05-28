@@ -11,15 +11,17 @@ import UIKit
 extension UIActivityIndicatorView {
     func configureActivityIndicatorView() {
         self.backgroundColor = .gray
-        self.layer.cornerRadius = CGRectGetWidth(self.frame)/4.0
         self.color = .green
+        self.layer.cornerRadius = CGRectGetWidth(self.frame)/4.0
     }
     
     func hide() {
         self.isHidden = true
+        self.stopAnimating()
     }
     
     func show() {
         self.isHidden = false
+        self.startAnimating()
     }
 }
