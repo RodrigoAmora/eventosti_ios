@@ -20,7 +20,7 @@ class EventoService {
                    encoding: URLEncoding.default)
             .response{ response in
                 switch response.result {
-                case .success(_):
+                    case .success(_):
                         switch response.response?.statusCode {
                             case 200:
                                 guard let data = response.data else { return }
@@ -51,11 +51,11 @@ class EventoService {
                                 break
                         }
                     
-                        case .failure(_):
-                            completion([], 0)
-                            break
+                    case .failure(_):
+                        completion([], 0)
+                        break
                 }
-            }
+        }
     }
     
     func buscarEventosPeloNome(nome: String, page: Int, completion: @escaping(_ eventos: [Evento]?, _ error: Int?) -> Void) {
@@ -105,7 +105,7 @@ class EventoService {
                             completion(nil, 0)
                             break
                 }
-            }
+        }
     }
     
 }
