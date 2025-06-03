@@ -16,7 +16,7 @@ O projeto usa as seguintes dependências:
 
 Acesso ao projeto:
 ------------------
-O projeto está disponível através do endereço:<br>
+O projeto está disponível na App Store:<br>
 https://apps.apple.com/us/app/eventos-ti/id6630363975
 
 Autor:
