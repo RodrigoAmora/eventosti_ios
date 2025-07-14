@@ -67,6 +67,15 @@ class ListaEventosViewController: BaseViewController {
         self.evntosTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         self.evntosTableView.isScrollEnabled = true
         self.evntosTableView.remembersLastFocusedIndexPath = true
+
+        var separatorColor = UIColor.black
+        if traitCollection.userInterfaceStyle == .dark {
+            separatorColor = UIColor.green
+        }
+
+        evntosTableView.separatorStyle = .singleLine
+        evntosTableView.separatorColor = separatorColor
+        evntosTableView.separatorInset = .zero
         
         self.refreshControl.addTarget(self, action: #selector(self.refreshTableView), for: .valueChanged)
         self.evntosTableView.refreshControl = self.refreshControl
@@ -181,15 +190,22 @@ extension ListaEventosViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let favouriteaction = UIContextualAction(style: .normal, title: String(localized: "view_details")) {
-            (action, view, completionHandler) in
-            guard let evento: Evento? = self.eventos[indexPath.row] else { return }
-            self.viewDetails(evento!)
+        let detailsAction = UIContextualAction(style: .normal, title: String(localized: "view_details")) { [weak self] _, _, completionHandler in
+            guard let self = self else {
+                completionHandler(false)
+                return
+            }
+
+            let evento = self.eventos[indexPath.row]
+            self.viewDetails(evento)
             completionHandler(true)
         }
-        favouriteaction.backgroundColor = UIColor.systemGray
-        
-        return UISwipeActionsConfiguration(actions: [favouriteaction])
+
+        detailsAction.backgroundColor = .systemGray
+
+        let configuration = UISwipeActionsConfiguration(actions: [detailsAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
