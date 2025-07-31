@@ -44,21 +44,11 @@ class ListaEventosViewController: BaseViewController {
     
     // MARK: - Métodos
     private func configureSearchBar() {
-        switch UIDevice.current.userInterfaceIdiom {
-            case .pad:
-                self.eventosSearchBar.frame.origin.y = 75
-            
-            case .phone:
-                self.eventosSearchBar.frame.origin.y = 95
-            
-            default:
-                self.eventosSearchBar.frame.origin.y = 85
-        }
-        
         self.eventosSearchBar.accessibilityIdentifier = "eventosSearchBar"
         self.eventosSearchBar.showsLargeContentViewer = true
         self.eventosSearchBar.isHidden = true
         self.eventosSearchBar.placeholder = String(localized: "search_event_by_name")
+        self.eventosSearchBar.posY()
     }
     
     private func configureTableView() {
