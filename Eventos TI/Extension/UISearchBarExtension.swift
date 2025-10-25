@@ -23,7 +23,7 @@ extension UISearchBar {
                 75
             
             case .phone:
-                95
+                115
             
             default:
                 85
