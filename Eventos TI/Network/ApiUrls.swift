@@ -10,7 +10,7 @@ import Foundation
 class ApiUrls {
     class func baseEventosTIAPIURL() -> String {
         #if DEBUG
-            return "http://localhost:8080/api"
+            return "http://localhost:8080"
         #else
             return "http://eventosti.com.br/api"
         #endif
