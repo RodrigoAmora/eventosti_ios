@@ -1,11 +1,11 @@
 # eventosti_ios
-Descrição:
-----------
+Descrição
+---------
 Projeto para divulgação de eventos de tecnologia.<br><br>
 O projeto roda a partir do iOS 17.0, usa a arquitetura MVVVM e Persistência de dados off-line.
 
-Dependências:
--------------
+Dependências
+------------
 O projeto usa as seguintes dependências:
 
 * Alamofire
@@ -14,13 +14,13 @@ O projeto usa as seguintes dependências:
 * Sheeeeeeeeet
 * XCTest
 
-Acesso ao projeto:
-------------------
+Acesso ao projeto
+-----------------
 O projeto está disponível na App Store:<br>
 https://apps.apple.com/us/app/eventos-ti/id6630363975
 
-Autor:
-------
+Autor
+-----
 <b>Rodrigo Amora</b>
 
 LinkedIn: https://linkedin.com/in/rodrigoamora <br>
