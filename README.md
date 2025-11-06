@@ -1,7 +1,7 @@
 # eventosti_ios
 Descrição
 ---------
-Projeto para divulgação de eventos de tecnologia.<br><br>
+Projeto para divulgação de eventos de tecnologia.<br>
 O projeto roda a partir do iOS 17.0, usa a arquitetura MVVVM e Persistência de dados off-line.
 
 Dependências
